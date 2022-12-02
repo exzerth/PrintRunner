@@ -1,6 +1,9 @@
+import Clients from '../components/Clients'
 import FeaturedProducts from '../components/FeaturedProducts'
 import HomeBanner from '../components/HomeBanner'
 import Meta from '../components/Meta'
+import Mission from '../components/Mission'
+import Promised from '../components/Promised'
 
 export default function Home() {
   return (
@@ -10,6 +13,9 @@ export default function Home() {
         <HomeBanner />
       </div>
       <FeaturedProducts />
+      <Promised />
+      <Mission />
+      <Clients />
     </>
   )
 }

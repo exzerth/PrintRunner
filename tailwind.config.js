@@ -7,7 +7,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'banner-blue': '#0f4c8d',
+        gray20: '#333333',
+        bgcolor: '#f5f9fc',
+        primary: '#1976d2',
       },
     },
   },

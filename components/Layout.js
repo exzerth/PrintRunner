@@ -1,6 +1,7 @@
+import Meta from '../components/Meta'
+import Footer from './Footer'
 import Nav from './Nav'
 import styles from '../styles/Layout.module.css'
-import Meta from '../components/Meta'
 
 const Layout = ({ children }) => {
   return (
@@ -10,6 +11,7 @@ const Layout = ({ children }) => {
       <div className={styles.container}>
         <main className={styles.main}>{children}</main>
       </div>
+      <Footer />
     </>
   )
 }
