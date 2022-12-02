@@ -83,17 +83,13 @@ const Nav = () => {
             </div>
 
             <div className={navStyles['middle-nav']}>
-              {/* make m-n-b into a component */}
+              {/* make m-n-b into a component, 'menu-box', 'menu-icon', 'account-box' */}
               <div
-                className={
-                  (navStyles['middle-nav-boxes'], navStyles['menu-box'])
-                }
+                className={navStyles['middle-nav-boxes']}
                 onClick={toggleMenuDropdown}
               >
                 <FontAwesomeIcon
-                  className={
-                    (navStyles['middle-nav-icon'], navStyles['menu-icon'])
-                  }
+                  className={navStyles['middle-nav-icon']}
                   icon={faBars}
                 />
                 <h3>Menu</h3>
@@ -116,15 +112,11 @@ const Nav = () => {
                 <h3>Call</h3>
               </div>
               <div
-                className={
-                  (navStyles['middle-nav-boxes'], navStyles['account-box'])
-                }
+                className={navStyles['middle-nav-boxes']}
                 onClick={toggleAccountDropdown}
               >
                 <FontAwesomeIcon
-                  className={
-                    (navStyles['middle-nav-icon'], navStyles['account-icon'])
-                  }
+                  className={navStyles['middle-nav-icon']}
                   icon={faUser}
                 />
                 <h3>Account</h3>
