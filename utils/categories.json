@@ -1,0 +1,54 @@
+{
+    "banners": [
+        {
+            "name": "Vinyl Banners",
+            "image":"https://s1-ecp.printrunner.com/sms/PR/Banners/Restaurant_Banners_Category-page_A.jpg",
+            "details":["Custom sizes accepted","Visible even in bright","Lasts up to five years"]
+    },
+    {
+        "name": "Step and Repeat Banners",
+        "image":"https://s1-ecp.printrunner.com/sms/PR/Banners/StepandRepeat-MainImage-CatPage.jpg",
+        "details":["wide range of sizes","can print on both sides","Banner stands optional"]
+    },
+    {
+        "name": "Retractable Banners",
+        "image":"https://s1-ecp.printrunner.com/sms/PR/Banners/RetractableBanner-MainImage_-_Category.jpg",
+        "details":["High opacity poly film","Quick and easy to set up","Free carrying case"]
+    },
+    {
+        "name": "Fabric Banners",
+        "image" :"https://s1-ecp.printrunner.com/sms/PR/Banners/02_Fabric-Banner_category%20(1).jpg",
+        "details":["Washable polyester fabric","Suitable for out door use","Optional accessories"]
+    },
+    {
+        "name": "Mesh Banners",
+        "image": "https://s1-ecp.printrunner.com/sms/PR/Banners/meshbanners-Category.jpg",
+        "details":["Heavy-duty mesh vinyl","Best for windy locations","Custom sizes up to 20' x 8'"]
+    },
+    {
+        "name": "Pole Banners",
+        "image":"https://s1-ecp.printrunner.com/sms/PR/Banners/02_Pole-Banners-category-image-rev1.jpg",
+        "details":["Street pole or wall mount","Wide array of sizes","Optional pole brackets"]
+    },
+    {
+        "name": "Deluxe Retractable Banners",
+        "image":"https://s1-ecp.printrunner.com/sms/PR/Banners/02_Deluxe-Retractable-Banner_category.jpg",
+        "details":["Sturdy aluminium base","Can print on both sides","Outdoor options available"]
+    },
+    {
+        "name": "X-stand Banners",
+        "image": "https://s1-ecp.printrunner.com/sms/PR/Banners/00_XstandBanners-CatPage.jpg",
+        "details":["24' x 70' standard size","Quick and easy to set up","Free carrying case"]
+    },
+    {
+        "name": "Tabletop Banners",
+        "image": "https://s1-ecp.printrunner.com/sms/PR/Banners/02_Table-Top-Banner_category.jpg",
+        "details":["No assembly needed","Resistant to water and wrinkling","Silver aluminium base"]
+    },
+    {
+        "name": "Backdrops",
+        "image":"https://s1-ecp.printrunner.com/1822/Event_Backdrops.JPG",
+        "details":["Wide range of sizes","Can print on both sides","Optional accessories"]
+    }
+    ]
+}
