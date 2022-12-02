@@ -5,7 +5,7 @@ const FeaturedProducts = () => {
   return (
     <>
     <div className="container px-[15px] mb-5">
-        <div className="font-semibold text-center text-gray20 text-xl mb-9">Featureded Products</div>
+        <div className="font-semibold text-center text-gray20 text-xl mb-9">Featureds Products</div>
         <div className="flex flex-wrap justify-center w-full">
             <div className="columns-2 w-full">
                 <ProductsCard/>
