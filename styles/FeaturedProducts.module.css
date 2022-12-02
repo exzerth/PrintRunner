@@ -1,0 +1,11 @@
+.card {
+    background-color: #f5f9fc;
+    color: #1976d2;
+    margin-bottom: 24px;
+    padding: 0 12px;
+}
+
+.link {
+    display: block;
+    height: 100%;
+}
