@@ -10,7 +10,7 @@ const Promised = () => {
         <div className="promises">
             <div className="flex align-center mb-[37px]">
                 <div className="mr-[21px]">
-                    <Image src={fastTurnImg} />
+                    <Image src={fastTurnImg} alt=""/>
                 </div>
                 <div className="text">
                     <div className="text-base font-bold">FAST TURNAROUNDS</div>
@@ -21,7 +21,7 @@ const Promised = () => {
         <div className="promises">
             <div className="flex align-center mb-[37px]">
                 <div className="mr-[21px]">
-                    <Image src={detailedImg} />
+                    <Image src={detailedImg} alt=""/>
                 </div>
                 <div className="text">
                     <div className="text-base font-bold">OVER 400K ORDERS COMPLETED</div>
@@ -32,7 +32,7 @@ const Promised = () => {
         <div className="promises">
             <div className="flex align-center mb-[37px]">
                 <div className="mr-[21px]">
-                    <Image src={qualityImg} className="max-w-none" />
+                    <Image src={qualityImg} className="max-w-none" alt=""/>
                 </div>
                 <div className="text">
                     <div className="text-base font-bold">GREAT QUALITY</div>

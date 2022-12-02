@@ -52,7 +52,7 @@ const Footer = () => {
                     </div>
                     <div className="news mt-[40px]">
                         <div className="newsbox mb-[20px] max-w-[400px]">
-                            <div className="mb-[8px] font-bold text-[18px]">Don't Miss Out</div>
+                            <div className="mb-[8px] font-bold text-[18px]">Don&apos;t Miss Out</div>
                             <p className='mb-[24px] leading-[19px] font-normal'>Exclusive offers and products are just a click away.</p>
                             <form action="">
                                 <div className="formbox flex justify-between">

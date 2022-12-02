@@ -11,47 +11,47 @@ const Clients = () => {
                 <div className="flex flex-row flex-wrap justify-center">
                     <div className="wrapper">
                         <div className="flex-[20%] text-center px-2 mb-[52px]">
-                            <Image src={googleImg}/>
+                            <Image src={googleImg} alt=""/>
                         </div>
                     </div>
                     <div className="wrapper">
                         <div className="flex-[20%] text-center px-2 mb-[52px]">
-                            <Image src={googleImg}/>
+                            <Image src={googleImg} alt=""/>
                         </div>
                     </div>
                     <div className="wrapper">
                         <div className="flex-[20%] text-center px-2 mb-[52px]">
-                            <Image src={googleImg}/>
+                            <Image src={googleImg} alt=""/>
                         </div>
                     </div>
                     <div className="wrapper">
                         <div className="flex-[20%] text-center px-2 mb-[52px]">
-                            <Image src={googleImg}/>
+                            <Image src={googleImg} alt=""/>
                         </div>
                     </div>
                     <div className="wrapper">
                         <div className="flex-[20%] text-center px-2 mb-[52px]">
-                            <Image src={googleImg}/>
+                            <Image src={googleImg} alt=""/>
                         </div>
                     </div>
                     <div className="wrapper">
                         <div className="flex-[20%] text-center px-2 mb-[52px]">
-                            <Image src={googleImg}/>
+                            <Image src={googleImg} alt=""/>
                         </div>
                     </div>
                     <div className="wrapper">
                         <div className="flex-[20%] text-center px-2 mb-[52px]">
-                            <Image src={googleImg}/>
+                            <Image src={googleImg} alt=""/>
                         </div>
                     </div>
                     <div className="wrapper">
                         <div className="flex-[20%] text-center px-2 mb-[52px]">
-                            <Image src={googleImg}/>
+                            <Image src={googleImg} alt=""/>
                         </div>
                     </div>
                     <div className="wrapper">
                         <div className="flex-[20%] text-center px-2 mb-[52px]">
-                            <Image src={googleImg}/>
+                            <Image src={googleImg} alt=""/>
                         </div>
                     </div>
                 </div>

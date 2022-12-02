@@ -9,7 +9,7 @@ const ProductsCard = () => {
             <a href="#" className={cardStyles.link}>
                 <div className="">
                     <div className="min-h-[144px] w-full">
-                        <Image src={holidayCard} className="m-auto" />
+                        <Image src={holidayCard} className="m-auto" alt=""/>
                     </div>
                     <div className="font-semibold text-base text-center pb-[16px]">
                         Holiday Cards 
