@@ -1,4 +1,4 @@
-/* import Link from "next/link"; */
+import Link from 'next/link'
 import { useRef } from 'react'
 import navStyles from '../styles/Nav.module.css'
 import Image from 'next/image'
@@ -45,19 +45,12 @@ const Nav = () => {
     searchOverlayRef.current.classList.toggle(
       `${navStyles['search-overlay-show']}`
     )
-
-    /* document
-      .querySelector('.search-wrapper')
-      .classList.toggle('search-overlay-show') */
   }
 
   const closeSearchOverlay = () => {
     searchOverlayRef.current.classList.toggle(
       `${navStyles['search-overlay-show']}`
     )
-    /* document
-      .querySelector('.search-wrapper')
-      .classList.toggle('search-overlay-show') */
   }
 
   return (
@@ -68,13 +61,16 @@ const Nav = () => {
             <div className={navStyles['top-nav']}>
               <Image className={navStyles['brand-logo']} src={logoImg} alt="" />
               <div className={navStyles['top-nav-search-box']}>
-                <FontAwesomeIcon
-                  className={navStyles['top-nav-search-icon']}
-                  icon={faSearch}
-                />
+                <div className={navStyles['top-nav-search-icon-box']}>
+                  <FontAwesomeIcon
+                    className={navStyles['top-nav-search-icon']}
+                    icon={faSearch}
+                  />
+                </div>
                 <input
                   className={navStyles['top-nav-search-box-input']}
                   type="text"
+                  placeholder="Search (e.g. waterproof labels, vinyl banners, etc.)"
                 />
               </div>
               <div className={navStyles['top-nav-links-box']}>
@@ -85,65 +81,88 @@ const Nav = () => {
                   />
                   <a href="#services">Services</a>
                   <a href="#help">Help</a>
-                  <a href="#call">1-888-278-3120</a>
+                  <a className={navStyles['call-icon']} href="#call">
+                    1-888-278-3120
+                  </a>
                 </div>
                 <div className={navStyles['top-nav-links-box-lower']}>
-                  <a href="#accouunt">Account</a>
+                  <a
+                    className={navStyles['top-nav-accounts-icon']}
+                    href="#accouunt"
+                  >
+                    Account
+                  </a>
                   <a href="#orders">My Orders</a>
                   <a href="designs">My Designs</a>
-                  <a href="cart">Cart</a>
+                  <a className={navStyles['top-nav-cart-icon']} href="cart">
+                    Cart
+                  </a>
                 </div>
               </div>
             </div>
 
             <div className={navStyles['middle-nav']}>
               {/* make m-n-b into a component, 'menu-box', 'menu-icon', 'account-box' */}
-              <div
-                ref={menuRef}
-                className={navStyles['middle-nav-boxes']}
-                onClick={toggleMenuDropdown}
-              >
-                <FontAwesomeIcon
-                  id="menu-icon"
-                  className={navStyles['middle-nav-icon']}
-                  icon={faBars}
-                />
-                <h3>Menu</h3>
+              <div className={navStyles["middle-nav-desktop"]}>
+                <div className={navStyles["nav-desktop-wrapper"]}>
+                  <ul className={navStyles['nav-desktop-list']}>
+                    <li className={navStyles['nav-desktop-list-link']}><a href="#featured">Featured Products</a></li>
+                    <li className={navStyles['nav-desktop-list-link']}><a href="#stickers">Stickers & Labels</a></li>
+                    <li className={navStyles['nav-desktop-list-link']}><a href="#marketing">Marketing Materials</a></li>
+                    <li className={navStyles['nav-desktop-list-link']}><a href="#banners">Signs & Banners</a></li>
+                    <li className={navStyles['nav-desktop-list-link']}><a href="#promotions">Promotional Products</a></li>
+                    <li className={navStyles['nav-desktop-list-link']}><a href="#packaging">Packaging</a></li>
+                  </ul>
+                </div>
               </div>
-              <div
-                className={navStyles['middle-nav-boxes']}
-                onClick={openSearchOverlay}
-              >
-                <FontAwesomeIcon
-                  className={navStyles['middle-nav-icon']}
-                  icon={faSearch}
-                />
-                <h3>Search</h3>
-              </div>
-              <div className={navStyles['middle-nav-boxes']}>
-                <FontAwesomeIcon
-                  className={navStyles['middle-nav-icon']}
-                  icon={faPhone}
-                />
-                <h3>Call</h3>
-              </div>
-              <div
-                ref={accountRef}
-                className={navStyles['middle-nav-boxes']}
-                onClick={toggleAccountDropdown}
-              >
-                <FontAwesomeIcon
-                  className={navStyles['middle-nav-icon']}
-                  icon={faUser}
-                />
-                <h3>Account</h3>
-              </div>
-              <div className={navStyles['middle-nav-boxes']}>
-                <FontAwesomeIcon
-                  className={navStyles['middle-nav-icon']}
-                  icon={faCartShopping}
-                />
-                <h3>Cart</h3>
+              <div className={navStyles["middle-nav-mobile"]}>
+                <div
+                  ref={menuRef}
+                  className={navStyles['middle-nav-boxes']}
+                  onClick={toggleMenuDropdown}
+                >
+                  <FontAwesomeIcon
+                    id="menu-icon"
+                    className={navStyles['middle-nav-icon']}
+                    icon={faBars}
+                  />
+                  <h3>Menu</h3>
+                </div>
+                <div
+                  className={navStyles['middle-nav-boxes']}
+                  onClick={openSearchOverlay}
+                >
+                  <FontAwesomeIcon
+                    className={navStyles['middle-nav-icon']}
+                    icon={faSearch}
+                  />
+                  <h3>Search</h3>
+                </div>
+                <div className={navStyles['middle-nav-boxes']}>
+                  <FontAwesomeIcon
+                    className={navStyles['middle-nav-icon']}
+                    icon={faPhone}
+                  />
+                  <h3>Call</h3>
+                </div>
+                <div
+                  ref={accountRef}
+                  className={navStyles['middle-nav-boxes']}
+                  onClick={toggleAccountDropdown}
+                >
+                  <FontAwesomeIcon
+                    className={navStyles['middle-nav-icon']}
+                    icon={faUser}
+                  />
+                  <h3>Account</h3>
+                </div>
+                <div className={navStyles['middle-nav-boxes']}>
+                  <FontAwesomeIcon
+                    className={navStyles['middle-nav-icon']}
+                    icon={faCartShopping}
+                  />
+                  <h3>Cart</h3>
+                </div>
               </div>
             </div>
 
@@ -159,17 +178,17 @@ const Nav = () => {
                   </h6>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className={navStyles['menu-dropdown-links']}
-                    href="#banners"
+                    href="/banners"
                   >
                     Banners
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a
                     className={navStyles['menu-dropdown-links']}
-                    href="#business-cards"
+                    href="#business"
                   >
                     Business Cards
                   </a>
