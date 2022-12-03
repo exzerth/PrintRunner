@@ -1,4 +1,5 @@
 /* import Link from "next/link"; */
+import { useRef } from 'react'
 import navStyles from '../styles/Nav.module.css'
 import Image from 'next/image'
 import logoImg from '../images/pr-logo.svg'
@@ -14,36 +15,49 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 const Nav = () => {
+  const menuRef = useRef(null)
+  const menuDropdownRef = useRef(null)
+  const accountRef = useRef(null)
+  const accountDropdownRef = useRef(null)
+  const searchOverlayRef = useRef(null)
+
   const toggleMenuDropdown = () => {
-    document.querySelector('.menu-box').classList.toggle('menu-box-active')
-    document.querySelector('.menu-icon').classList.toggle('middle-nav-active')
-    document
-      .querySelector('.menu-dropdown-wrapper')
-      .classList.toggle('menu-dropdown-show')
+    menuRef.current.classList.toggle(`${navStyles['menu-box-active']}`)
+    menuRef.current.children[0].classList.toggle(
+      `${navStyles['middle-nav-active']}`
+    )
+    menuDropdownRef.current.classList.toggle(
+      `${navStyles['menu-dropdown-show']}`
+    )
   }
 
   const toggleAccountDropdown = () => {
-    document
-      .querySelector('.account-box')
-      .classList.toggle('account-box-active')
-    document
-      .querySelector('.account-icon')
-      .classList.toggle('middle-nav-active')
-    document
-      .querySelector('.account-dropdown-wrapper')
-      .classList.toggle('account-dropdown-show')
+    accountRef.current.classList.toggle(`${navStyles['account-box-active']}`)
+    accountRef.current.children[0].classList.toggle(
+      `${navStyles['middle-nav-active']}`
+    )
+    accountDropdownRef.current.classList.toggle(
+      `${navStyles['account-dropdown-show']}`
+    )
   }
 
   const openSearchOverlay = () => {
-    document
+    searchOverlayRef.current.classList.toggle(
+      `${navStyles['search-overlay-show']}`
+    )
+
+    /* document
       .querySelector('.search-wrapper')
-      .classList.toggle('search-overlay-show')
+      .classList.toggle('search-overlay-show') */
   }
 
   const closeSearchOverlay = () => {
-    document
+    searchOverlayRef.current.classList.toggle(
+      `${navStyles['search-overlay-show']}`
+    )
+    /* document
       .querySelector('.search-wrapper')
-      .classList.toggle('search-overlay-show')
+      .classList.toggle('search-overlay-show') */
   }
 
   return (
@@ -85,10 +99,12 @@ const Nav = () => {
             <div className={navStyles['middle-nav']}>
               {/* make m-n-b into a component, 'menu-box', 'menu-icon', 'account-box' */}
               <div
+                ref={menuRef}
                 className={navStyles['middle-nav-boxes']}
                 onClick={toggleMenuDropdown}
               >
                 <FontAwesomeIcon
+                  id="menu-icon"
                   className={navStyles['middle-nav-icon']}
                   icon={faBars}
                 />
@@ -112,6 +128,7 @@ const Nav = () => {
                 <h3>Call</h3>
               </div>
               <div
+                ref={accountRef}
                 className={navStyles['middle-nav-boxes']}
                 onClick={toggleAccountDropdown}
               >
@@ -131,7 +148,10 @@ const Nav = () => {
             </div>
 
             {/* middle-nav-dropdowns and more */}
-            <div className={navStyles['menu-dropdown-wrapper']}>
+            <div
+              ref={menuDropdownRef}
+              className={navStyles['menu-dropdown-wrapper']}
+            >
               <ul className={navStyles['menu-dropdown-container']}>
                 <li>
                   <h6 className={navStyles['menu-dropdown-title']}>
@@ -210,7 +230,10 @@ const Nav = () => {
               </ul>
             </div>
 
-            <div className={navStyles['account-dropdown-wrapper']}>
+            <div
+              ref={accountDropdownRef}
+              className={navStyles['account-dropdown-wrapper']}
+            >
               <ul className={navStyles['account-dropdown-container']}>
                 <li className={navStyles['login-btn']}>
                   <div className={navStyles['login-btn-box']}>
@@ -252,7 +275,7 @@ const Nav = () => {
               </ul>
             </div>
 
-            <div className={navStyles['search-wrapper']}>
+            <div ref={searchOverlayRef} className={navStyles['search-wrapper']}>
               <div className={navStyles['search-container']}>
                 <FontAwesomeIcon
                   className={navStyles['search-icon']}
