@@ -7,7 +7,7 @@ const ProductsCard = () => {
   return (
     <>
         <div className={cardStyles.card}>
-            <Link href="/banners" className={cardStyles.link}>
+            <Link href="#products" className={cardStyles.link}>
                 <div className="">
                     <div className="min-h-[144px] w-full">
                         <Image src={holidayCard} className="m-auto" alt=""/>
