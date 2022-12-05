@@ -6,8 +6,8 @@ import Image from "next/image"
     const productTypeDetails = props.productTypeDetails
 
    return(
-    <div className="w-full mb-[20px] border inline-block min-h-[350px]">
-      <Image src={productTypeImage} alt={productTypeName + 'Image'} />
+    <div className="relative w-full mb-[20px] border inline-block min-h-[350px]">
+      <Image src={productTypeImage} width={450} height={225} alt={productTypeName + 'Image'} />
       <h1 className="text-xl text-primary pt-4 font-semibold text-[15px] pl-[8px] pb-[8px] md:text-[22px] md:text-center">
         {productTypeName}
       </h1>
