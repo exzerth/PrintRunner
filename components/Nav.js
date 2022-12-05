@@ -216,7 +216,7 @@ const Nav = () => {
                 <li>
                   <a
                     className={navStyles['menu-dropdown-links']}
-                    href="/labels"
+                    href="#labels"
                   >
                     Labels
                   </a>
