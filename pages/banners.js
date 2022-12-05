@@ -12,15 +12,17 @@ export default function banners({
   categoryDescriptionTwo,
   categoryDescriptionThree,
   productTypeName,
+  productTypeImage,
+  productTypeDetails,
 }) {
-  categories.banners.map((banner) => {
-    productTypeName = banner.name
-  })
   bgImage = MainBanner
   categoryTitle = 'Banner Printing'
   categoryDescriptionOne = 'Banner printing services to promote your brand'
   categoryDescriptionTwo = 'Best for convention and trade shows'
   categoryDescriptionThree = 'Wide array of indoors and outdoors options'
+  productTypeName
+  productTypeImage
+  productTypeDetails
 
   return (
     <>
@@ -33,7 +35,24 @@ export default function banners({
           categoryDescriptionTwo={categoryDescriptionTwo}
           categoryDescriptionThree={categoryDescriptionThree}
         />
-        <BannerProducts productTypeName={productTypeName} />
+        <div className="container mt-5">
+          <div className="w-full flex justify-center px-[15px] md:px-[24px] flex-wrap">
+            <div className="columns-2 lg:columns-3 w-full">
+              {categories.banners.map((banner) => (
+                <BannerProducts
+                  key={banner.name}
+                  productTypeName={banner.name}
+                  productTypeImage={banner.image}
+                  productTypeDetails={banner.details.map((detail, index) => (
+                    <li className="mb-[5px]" key={index}>
+                      {detail}
+                    </li>
+                  ))}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
         <BannerDescription />
       </div>
     </>
