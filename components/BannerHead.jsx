@@ -1,34 +1,35 @@
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
-import MainBanner from "../images/MainBanner.jpg"
-function BannerHead(){
+
+function BannerHead(props){
+  const bgImage = props.bgImage
+  const categoryTitle = props.categoryTitle
+  const categoryDescriptionOne = props.categoryDescriptionOne
+  const categoryDescriptionTwo = props.categoryDescriptionTwo
+  const categoryDescriptionThree = props.categoryDescriptionThree
     
    const check =  <FontAwesomeIcon icon={faCheck}/>
     return(
-    <div className='flex justify-center mt-10 w-[98.2vw]'>
-        <div className='flex bg-bgcolor md:w-9/12 min-h-max'>
-        <div className="md:pt-10 md:pb-10 md:w-fit pt-5 pb-5  ">
-        <h1 className="text-2xl font-bold text-slate-800 p-2 ">Banner Printing</h1>
-        <ul>
-        <li>
-          <i className="text-blue-500 p-2">{check}</i> Banner printing services
-          to promote your brand
-        </li>
-        <li className='hidden md:block'>
-          <i className="text-blue-500 p-2">{check}</i> Banner printing services
-          to promote your brand
-        </li>
-        <li  className='hidden md:block'>
-          <i className="text-blue-500 p-2">{check}</i> Banner printing services
-          to promote your brand
-        </li>
-        </ul>
-        </div>
-        <div className='hidden md:flex w-fit'> 
-          <Image src={MainBanner} className="w-fit" alt="Main_Banner"/>
-      </div> 
-  </div>
+    <div className='mt-10 w-full text-gray20 md:px-[24px] md:relative'>
+      <Image src={bgImage} className="hidden md:block md:object-fit md:h-[200px]" alt="Main_Banner"/>
+
+      <div className='bg-bgcolor md:bg-transparent md:absolute top-0 h-[120px] pl-[5px]'>
+          <div className="py-5">
+            <h1 className="text-2xl font-bold text-slate-800 p-[10px] ">{categoryTitle}</h1>
+            <ul>
+            <li className="text-[14px] md:text-[16px] md:mb-[4px]">
+              <i className="text-blue-500 p-2">{check}</i> {categoryDescriptionOne}
+            </li>
+            <li className='hidden md:block md:mb-[4px]'>
+              <i className="text-blue-500 p-2">{check}</i> {categoryDescriptionTwo}
+            </li>
+            <li  className='hidden md:block md:mb-[4px]'>
+              <i className="text-blue-500 p-2">{check}</i> {categoryDescriptionThree}
+            </li>
+            </ul>
+          </div>
+      </div>
     </div>
     )
 
