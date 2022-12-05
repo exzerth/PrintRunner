@@ -1,3 +1,4 @@
+import Link from "next/link"
 import categories from "../utils/categories.json"
 
   function BannerProducts(props){
