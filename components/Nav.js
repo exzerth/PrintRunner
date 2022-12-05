@@ -198,20 +198,20 @@ const Nav = () => {
                   </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className={navStyles['menu-dropdown-links']}
                     href="/business"
                   >
                     Business Cards
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className={navStyles['menu-dropdown-links']}
                     href="/flyers"
                   >
                     Flyers
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a
