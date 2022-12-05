@@ -12,7 +12,7 @@ function BannerHead(props){
    const check =  <FontAwesomeIcon icon={faCheck}/>
     return(
     <div className='mt-10 w-full text-gray20 md:px-[24px] md:relative'>
-      <Image src={bgImage} className="hidden md:block md:object-fit md:h-[200px]" alt="Main_Banner"/>
+      <Image src={bgImage} className="hidden md:block md:object-fit md:h-[200px] w-[100%]" alt="Main_Banner"/>
 
       <div className='bg-bgcolor md:bg-transparent md:absolute top-0 h-[120px] pl-[5px]'>
           <div className="py-5">

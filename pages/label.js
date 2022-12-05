@@ -28,7 +28,7 @@ export default function label({
   return (
     <>
       <Meta />
-      <div className="container">
+      <div className="container my-0 mx-auto">
         <BannerHead
           bgImage={bgImage}
           categoryTitle={categoryTitle}
@@ -81,7 +81,6 @@ export default function label({
             <div className="columns-2 lg:columns-3 w-full">
               {labelsCategory.label.shape.map((label) => (
                 <BannerProducts
-                  className="h-[145px]"
                   key={label.name}
                   productTypeName={label.name}
                   productTypeImage={label.image}

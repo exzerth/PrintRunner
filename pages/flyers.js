@@ -27,7 +27,7 @@ export default function flyers({
   return (
     <>
       <Meta />
-      <div className="container">
+      <div className="container my-0 mx-auto">
         <BannerHead
           bgImage={bgImage}
           categoryTitle={categoryTitle}

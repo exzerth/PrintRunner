@@ -5,7 +5,7 @@ import { faBinoculars, faCheck } from '@fortawesome/free-solid-svg-icons'
 function BannerDescription() {
  const binoculars = <FontAwesomeIcon icon={faBinoculars} />
   return (
-    <div  className='flex mb-20 md:w-[98.2vw] border justify-center'>
+    <div  className='flex mb-20 md:w-[98.2vw] lg:w-[100%] border justify-center'>
       <div className='md:border-2 mt-20 md:w-9/12'>
         <div className="h-20 bg-gray-200">
           <div className="flex w-36 border-t-4 border-blue-500 bg-blue-100 p-5 text-blue-500 flex-col justify-center text-2xl h-20">
