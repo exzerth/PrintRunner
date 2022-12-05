@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <>
     <footer className="bg-[#ebeef3] text-center py-[40px] text-gray20">
-        <div className="px-[15px] md:px-[24px] lg:flex lg:justify-between">
+        <div className="container mx-auto px-[15px] md:px-[24px] lg:flex lg:justify-between">
             <div className="boxup flex flex-col md:flex-row items-center md:items-start lg:w-[65%]">
                 <div className="boxup-box flex flex-col grow items-center md:items-start basis-auto mb-[40px]">
                     <div className="font-bold mb-4 text-lg">Products & Services</div>
