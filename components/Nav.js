@@ -103,19 +103,31 @@ const Nav = () => {
 
             <div className={navStyles['middle-nav']}>
               {/* make m-n-b into a component, 'menu-box', 'menu-icon', 'account-box' */}
-              <div className={navStyles["middle-nav-desktop"]}>
-                <div className={navStyles["nav-desktop-wrapper"]}>
+              <div className={navStyles['middle-nav-desktop']}>
+                <div className={navStyles['nav-desktop-wrapper']}>
                   <ul className={navStyles['nav-desktop-list']}>
-                    <li className={navStyles['nav-desktop-list-link']}><a href="#featured">Featured Products</a></li>
-                    <li className={navStyles['nav-desktop-list-link']}><a href="#stickers">Stickers & Labels</a></li>
-                    <li className={navStyles['nav-desktop-list-link']}><a href="#marketing">Marketing Materials</a></li>
-                    <li className={navStyles['nav-desktop-list-link']}><a href="#banners">Signs & Banners</a></li>
-                    <li className={navStyles['nav-desktop-list-link']}><a href="#promotions">Promotional Products</a></li>
-                    <li className={navStyles['nav-desktop-list-link']}><a href="#packaging">Packaging</a></li>
+                    <li className={navStyles['nav-desktop-list-link']}>
+                      <a href="#featured">Featured Products</a>
+                    </li>
+                    <li className={navStyles['nav-desktop-list-link']}>
+                      <a href="#stickers">Stickers & Labels</a>
+                    </li>
+                    <li className={navStyles['nav-desktop-list-link']}>
+                      <a href="#marketing">Marketing Materials</a>
+                    </li>
+                    <li className={navStyles['nav-desktop-list-link']}>
+                      <a href="#banners">Signs & Banners</a>
+                    </li>
+                    <li className={navStyles['nav-desktop-list-link']}>
+                      <a href="#promotions">Promotional Products</a>
+                    </li>
+                    <li className={navStyles['nav-desktop-list-link']}>
+                      <a href="#packaging">Packaging</a>
+                    </li>
                   </ul>
                 </div>
               </div>
-              <div className={navStyles["middle-nav-mobile"]}>
+              <div className={navStyles['middle-nav-mobile']}>
                 <div
                   ref={menuRef}
                   className={navStyles['middle-nav-boxes']}
@@ -188,7 +200,7 @@ const Nav = () => {
                 <li>
                   <a
                     className={navStyles['menu-dropdown-links']}
-                    href="#business"
+                    href="/business"
                   >
                     Business Cards
                   </a>
@@ -196,7 +208,7 @@ const Nav = () => {
                 <li>
                   <a
                     className={navStyles['menu-dropdown-links']}
-                    href="#flyers"
+                    href="/flyers"
                   >
                     Flyers
                   </a>
@@ -204,7 +216,7 @@ const Nav = () => {
                 <li>
                   <a
                     className={navStyles['menu-dropdown-links']}
-                    href="#labels"
+                    href="/labels"
                   >
                     Labels
                   </a>
