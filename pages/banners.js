@@ -4,6 +4,7 @@ import BannerProducts from '../components/BannerProducts'
 import MainBanner from '../images/mainbanner.jpeg'
 import Meta from '../components/Meta'
 import categories from '../utils/categories.json'
+import BannerLinks from '../components/BannerLinks'
 
 export default function banners({
   bgImage,
@@ -54,6 +55,7 @@ export default function banners({
           </div>
         </div>
         <BannerDescription />
+        <BannerLinks />
       </div>
     </>
   )
