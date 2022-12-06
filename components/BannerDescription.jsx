@@ -5,15 +5,15 @@ import { faBinoculars, faCheck } from '@fortawesome/free-solid-svg-icons'
 function BannerDescription() {
  const binoculars = <FontAwesomeIcon icon={faBinoculars} />
   return (
-    <div  className='flex mb-20 md:w-[98.2vw] lg:w-[100%] border justify-center'>
-      <div className='md:border-2 mt-20 md:w-9/12'>
+    <div  className='flex mb-20 w-[100%] justify-center md:px-[24px]'>
+      <div className='md:border-2 mt-20'>
         <div className="h-20 bg-gray-200">
           <div className="flex w-36 border-t-4 border-blue-500 bg-blue-100 p-5 text-blue-500 flex-col justify-center text-2xl h-20">
             <i className="text-center">{binoculars}</i>
             <h3 className="font-semibold">Overview</h3>
           </div>
         </div>
-        <div className="m-4 mt-10 ">
+        <div className="m-4 mt-10 mb-20  ">
           <h1 className="font-medium text-slate-900 text-2xl">
             Banner Printing for Every Season and Situation
           </h1>
