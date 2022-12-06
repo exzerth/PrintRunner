@@ -405,6 +405,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+        position: relative;
     }
 
     .nav-desktop-list-link {
@@ -414,6 +415,105 @@
     .nav-desktop-list-link a {
         display: inline-block;
         padding: 16px 4px;
+    }
+
+    .nav-desktop-list-link:first-child::after {
+        content: "\25bd";
+        font-size: 0.85em;
+        color: #FF9B00;
+        font-weight: 400;
+    }
+
+    .featured-dropdown {
+        display: none;
+        color: #333;
+        max-height: 900px;
+        background: white;
+        position: absolute;
+        min-width: 264px;
+        min-height: 200px;
+        width: auto;
+        padding: 20px;
+        z-index: 2;
+        box-shadow: 0 3px 3px rgb(0 0 0 / 25%);
+    }
+
+    .featured-dropdown-show {
+        display: block;
+        z-index: 2;
+    }
+
+    .featured-dropdown-tabmenu {
+        position: relative;
+    }
+
+    .tabmenu-item {
+        color: #247ECA;
+        display: inline-block;
+        font-size: 14px;
+        vertical-align: middle;
+        padding: 18px;
+        padding-top: 0;
+        font-weight: 600;
+        cursor: pointer;
+        margin-right: 80px;
+        position: relative;
+    }
+
+    .featured-tabmenu-content {
+        font-size: 16px;
+        border-top: 1px solid #dcdcdc;
+        position: relative;
+    }
+
+    .sellers-sub-menu {
+        padding-top: 10px;
+        padding-bottom: 30px;
+        position: relative;
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .sellers-sub-container {
+        margin-top: 12px;
+    }
+
+    .submenu-link {
+        font-size: 13px;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 4px;
+        padding-bottom: 0;
+        position: relative;
+    }
+
+    .submenu-link a{
+        padding: 0;
+        display: inline-block;
+        position: relative;
+        padding-right: 4px;
+    }
+
+    .submenu-link a::after {
+        content: "\25b7";
+        font-size: 0.85em;
+        margin-left: 8px;
+        color: inherit;
+        font-weight: 700;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(100%, -45%);
+    }
+
+    .submenu-link-item a {
+        font-size: 13px;
+        padding: 5px;
+        font-weight: 400;
+        margin-left: -5px;
+        margin-bottom: 4px;
+        line-height: 1.2;
     }
  
 }

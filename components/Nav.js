@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import navStyles from '../styles/Nav.module.css'
 import Image from 'next/image'
 import logoImg from '../images/pr-logo.svg'
@@ -20,6 +20,7 @@ const Nav = () => {
   const accountRef = useRef(null)
   const accountDropdownRef = useRef(null)
   const searchOverlayRef = useRef(null)
+  const mouseOverRef = useRef(null)
 
   const toggleMenuDropdown = () => {
     menuRef.current.classList.toggle(`${navStyles['menu-box-active']}`)
@@ -51,6 +52,13 @@ const Nav = () => {
     searchOverlayRef.current.classList.toggle(
       `${navStyles['search-overlay-show']}`
     )
+  }
+
+  const handleMouseOver = () => {
+    console.log(mouseOverRef.current.classList.toggle(`${navStyles['featured-dropdown-show']}`))
+  }
+  const handleMouseOut = () => {
+    mouseOverRef.current.classList.toggle(`${navStyles['featured-dropdown-show']}`)
   }
 
   return (
@@ -102,12 +110,125 @@ const Nav = () => {
             </div>
 
             <div className={navStyles['middle-nav']}>
-              {/* make m-n-b into a component, 'menu-box', 'menu-icon', 'account-box' */}
+              {/* make m-n-b into a component*/}
+
+              {/* middle-nav desktop section start */}
               <div className={navStyles['middle-nav-desktop']}>
                 <div className={navStyles['nav-desktop-wrapper']}>
                   <ul className={navStyles['nav-desktop-list']}>
-                    <li className={navStyles['nav-desktop-list-link']}>
+                    <li className={navStyles['nav-desktop-list-link']} onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
                       <a href="#featured">Featured Products</a>
+                      <div ref={mouseOverRef} className={navStyles['featured-dropdown']}>
+                        <div className={navStyles["featured-dropdown-tabmenu"]}>
+                          <label htmlFor="" className={navStyles['tabmenu-item']}>Best Sellers</label>
+                          <label htmlFor="" className={navStyles['tabmenu-item']}>Shop By Industries</label>
+                          <label htmlFor="" className={navStyles['tabmenu-item']}>Shop By Options</label>
+                          <div className={navStyles["featured-tabmenu-content"]}>
+                            <div className={navStyles["sellers-sub-menu"]}>
+                              <div className={navStyles["sellers-sub-container"]}>
+                                <h4 className={navStyles['submenu-link']}><a href="/label">Labels</a></h4>
+                                <ul>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Custom Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Kiss Cut Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Roll Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Waterproof Labels</a></li>
+                                </ul>
+                              </div>
+                              <div className={navStyles["sellers-sub-container"]}>
+                                <h4 className={navStyles['submenu-link']}><a href="#">Business Cards</a></h4>
+                                <ul>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Custom Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Kiss Cut Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Roll Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Waterproof Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Waterproof Labels</a></li>
+                                </ul>
+                              </div>
+                              <div className={navStyles["sellers-sub-container"]}>
+                                <h4 className={navStyles['submenu-link']}><a href="/flyers">Promotional Products</a></h4>
+                                <ul>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Custom Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Kiss Cut Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Roll Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Waterproof Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Waterproof Labels</a></li>
+                                </ul>
+                              </div>
+                              <div className={navStyles["sellers-sub-container"]}>
+                                <h4 className={navStyles['submenu-link']}><a href="/label">Stickers</a></h4>
+                                <ul>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Custom Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Kiss Cut Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Roll Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Waterproof Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Waterproof Labels</a></li>
+                                </ul>
+                              </div>
+                              <div className={navStyles["sellers-sub-container"]}>
+                                <h4 className={navStyles['submenu-link']}><a href="/label">Signs & Banners</a></h4>
+                                <ul>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Custom Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Kiss Cut Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Roll Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Waterproof Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Waterproof Labels</a></li>
+                                </ul>
+                              </div>
+                              <div className={navStyles["sellers-sub-container"]}>
+                                <h4 className={navStyles['submenu-link']}><a href="/label">Envelopes</a></h4>
+                                <ul>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Custom Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Kiss Cut Labels</a></li>
+                                </ul>
+                              </div>
+                              <div className={navStyles["sellers-sub-container"]}>
+                                <h4 className={navStyles['submenu-link']}><a href="/label">Flyers</a></h4>
+                                <ul>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Custom Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Kiss Cut Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Roll Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Waterproof Labels</a></li>
+                                </ul>
+                              </div>
+                              <div className={navStyles["sellers-sub-container"]}>
+                                <h4 className={navStyles['submenu-link']}><a href="/label">Hand Tags</a></h4>
+                                <ul>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Custom Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Kiss Cut Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Roll Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Waterproof Labels</a></li>
+                                </ul>
+                              </div>
+                              <div className={navStyles["sellers-sub-container"]}>
+                                <h4 className={navStyles['submenu-link']}><a href="/label">Others</a></h4>
+                                <ul>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Custom Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Kiss Cut Labels</a></li>
+                                </ul>
+                              </div>
+                              <div className={navStyles["sellers-sub-container"]}>
+                                <h4 className={navStyles['submenu-link']}><a href="/label">Postcards</a></h4>
+                                <ul>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Custom Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Kiss Cut Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Roll Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Waterproof Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Waterproof Labels</a></li>
+                                </ul>
+                              </div>
+                              <div className={navStyles["sellers-sub-container"]}>
+                                <h4 className={navStyles['submenu-link']}><a href="/label">Posters</a></h4>
+                                <ul>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Custom Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Kiss Cut Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Roll Labels</a></li>
+                                  <li className={navStyles['submenu-link-item']}><a href="#">Waterproof Labels</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </li>
                     <li className={navStyles['nav-desktop-list-link']}>
                       <a href="#stickers">Stickers & Labels</a>
@@ -127,6 +248,8 @@ const Nav = () => {
                   </ul>
                 </div>
               </div>
+              {/* middle-nav desktop section end */}
+
               <div className={navStyles['middle-nav-mobile']}>
                 <div
                   ref={menuRef}
@@ -324,6 +447,12 @@ const Nav = () => {
                 </div>
               </div>
             </div>
+
+            {/* middle-nav desktop dropsdowns start */}
+
+            
+
+            {/* middle-nav desktop dropsdowns end */}
             {/* middle-nav-dropdowns and more  ends*/}
 
             <div className={navStyles['bottom-nav']}>
