@@ -193,6 +193,7 @@ const Nav = () => {
                   <Link
                     className={navStyles['menu-dropdown-links']}
                     href="/banners"
+                    onClick={toggleMenuDropdown}
                   >
                     Banners
                   </Link>
@@ -201,6 +202,7 @@ const Nav = () => {
                   <Link
                     className={navStyles['menu-dropdown-links']}
                     href="/business"
+                    onClick={toggleMenuDropdown}
                   >
                     Business Cards
                   </Link>
@@ -209,6 +211,7 @@ const Nav = () => {
                   <Link
                     className={navStyles['menu-dropdown-links']}
                     href="/flyers"
+                    onClick={toggleMenuDropdown}
                   >
                     Flyers
                   </Link>
@@ -217,6 +220,7 @@ const Nav = () => {
                   <Link
                     className={navStyles['menu-dropdown-links']}
                     href="/label"
+                    onClick={toggleMenuDropdown}
                   >
                     Labels
                   </Link>
@@ -225,6 +229,7 @@ const Nav = () => {
                   <a
                     className={navStyles['menu-dropdown-links']}
                     href="#stickers"
+                    onClick={toggleMenuDropdown}
                   >
                     Stickers
                   </a>
@@ -233,6 +238,7 @@ const Nav = () => {
                   <a
                     className={navStyles['menu-dropdown-links']}
                     href="#carbonless-forms"
+                    onClick={toggleMenuDropdown}
                   >
                     Carbonless Forms
                   </a>
@@ -241,6 +247,7 @@ const Nav = () => {
                   <a
                     className={navStyles['menu-dropdown-links']}
                     href="#order-status"
+                    onClick={toggleMenuDropdown}
                   >
                     Check Order Status
                   </a>
@@ -249,12 +256,17 @@ const Nav = () => {
                   <a
                     className={navStyles['menu-dropdown-links']}
                     href="#contact"
+                    onClick={toggleMenuDropdown}
                   >
                     Contact Us
                   </a>
                 </li>
                 <li>
-                  <a className={navStyles['menu-dropdown-links']} href="#help">
+                  <a
+                    className={navStyles['menu-dropdown-links']}
+                    href="#help"
+                    onClick={toggleMenuDropdown}
+                  >
                     Help
                   </a>
                 </li>
