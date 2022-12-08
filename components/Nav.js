@@ -13,6 +13,7 @@ import {
   faShippingFast,
   faAngleDown,
 } from '@fortawesome/free-solid-svg-icons'
+import NavFeaturedLinks from './NavFeaturedLinks'
 
 const Nav = () => {
   const menuRef = useRef(null)
@@ -59,7 +60,9 @@ const Nav = () => {
         <div className={navStyles['nav-wrapper']}>
           <div className={navStyles['nav-container']}>
             <div className={navStyles['top-nav']}>
-              <Image className={navStyles['brand-logo']} src={logoImg} alt="" />
+              <div className={navStyles['brand-logo']}>
+                <Link href="/"><Image src={logoImg} alt="" /></Link>
+              </div>
               <div className={navStyles['top-nav-search-box']}>
                 <div className={navStyles['top-nav-search-icon-box']}>
                   <FontAwesomeIcon
@@ -93,8 +96,8 @@ const Nav = () => {
                     Account
                   </a>
                   <a href="#orders">My Orders</a>
-                  <a href="designs">My Designs</a>
-                  <a className={navStyles['top-nav-cart-icon']} href="cart">
+                  <a href="#designs">My Designs</a>
+                  <a className={navStyles['top-nav-cart-icon']} href="#cart">
                     Cart
                   </a>
                 </div>
@@ -102,31 +105,33 @@ const Nav = () => {
             </div>
 
             <div className={navStyles['middle-nav']}>
-              {/* make m-n-b into a component, 'menu-box', 'menu-icon', 'account-box' */}
+              {/* make m-n-b into a component*/}
+
+              {/* middle-nav desktop section start */}
               <div className={navStyles['middle-nav-desktop']}>
                 <div className={navStyles['nav-desktop-wrapper']}>
                   <ul className={navStyles['nav-desktop-list']}>
+                    <NavFeaturedLinks/>
                     <li className={navStyles['nav-desktop-list-link']}>
-                      <a href="#featured">Featured Products</a>
+                      <Link href="/label">Stickers & Labels</Link>
                     </li>
                     <li className={navStyles['nav-desktop-list-link']}>
-                      <a href="#stickers">Stickers & Labels</a>
+                      <Link href="#marketing">Marketing Materials</Link>
                     </li>
                     <li className={navStyles['nav-desktop-list-link']}>
-                      <a href="#marketing">Marketing Materials</a>
+                      <Link href="/banners">Signs & Banners</Link>
                     </li>
                     <li className={navStyles['nav-desktop-list-link']}>
-                      <a href="#banners">Signs & Banners</a>
+                      <Link href="#promotions">Promotional Products</Link>
                     </li>
                     <li className={navStyles['nav-desktop-list-link']}>
-                      <a href="#promotions">Promotional Products</a>
-                    </li>
-                    <li className={navStyles['nav-desktop-list-link']}>
-                      <a href="#packaging">Packaging</a>
+                      <Link href="#packaging">Packaging</Link>
                     </li>
                   </ul>
                 </div>
               </div>
+              {/* middle-nav desktop section end */}
+
               <div className={navStyles['middle-nav-mobile']}>
                 <div
                   ref={menuRef}
@@ -336,6 +341,12 @@ const Nav = () => {
                 </div>
               </div>
             </div>
+
+            {/* middle-nav desktop dropsdowns start */}
+
+            
+
+            {/* middle-nav desktop dropsdowns end */}
             {/* middle-nav-dropdowns and more  ends*/}
 
             <div className={navStyles['bottom-nav']}>
