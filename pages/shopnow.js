@@ -5,7 +5,7 @@ export default function shopnow() {
   return (
     <>
       <Meta />
-      <div className="container">
+      <div className="container mx-auto">
         <ShopNow />
       </div>
     </>
