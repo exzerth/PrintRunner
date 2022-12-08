@@ -270,9 +270,8 @@
     }
 
     .brand-logo {
-        padding-right: 1.5rem;
-        width: 160px;
-        height: 48px;
+        padding-right: 1rem;
+        width: 60%;
     }
 
     .top-nav-search-box {
@@ -412,6 +411,11 @@
         color: #fff;
     }
 
+    .desktop-link-active {
+        background-color: #f7f7f7;
+        color: #247ECA;
+    }
+
     .nav-desktop-list-link a {
         display: inline-block;
         padding: 16px 4px;
@@ -448,7 +452,7 @@
     }
 
     .tabmenu-item {
-        color: #247ECA;
+        color: #999999;
         display: inline-block;
         font-size: 14px;
         vertical-align: middle;
@@ -470,11 +474,32 @@
         padding-top: 10px;
         padding-bottom: 30px;
         position: relative;
-        display: grid;
+        display: none;
         grid-template-columns: auto auto auto;
     }
 
+    .sellers-sub-menu-active {
+        display: grid;
+    }
+
     .sellers-sub-container {
+        margin-top: 12px;
+    }
+
+    .industry-sub-menu {
+        padding-top: 20px;
+        padding-bottom: 30px;
+        position: relative;
+        display: none;
+        grid-template-columns: auto auto auto;
+        grid-row-gap: 20px;
+    }
+
+    .industry-sub-menu-active {
+        display: grid;
+    }
+
+    .industry-sub-container {
         margin-top: 12px;
     }
 
@@ -507,9 +532,102 @@
         transform: translate(100%, -45%);
     }
 
+    .i-submenu-link {
+        font-size: 13px;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 4px;
+        padding-bottom: 0;
+        position: relative;
+    }
+
+    .i-submenu-link a{
+        padding: 0;
+        display: inline-block;
+        position: relative;
+        padding-right: 4px;
+        padding-left: 32px;
+    }
+
+    .i-realestate a::before {
+        content: "";
+        background: url(https://s1-ecp.printrunner.com/1520/real-estate.svg) no-repeat center center/contain;
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+        top: -2px;
+    }
+
+    .i-retail a::before {
+        content: "";
+        background: url(https://s1-ecp.printrunner.com/1513/retail.svg) no-repeat center center/contain;
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+        top: -2px;
+    }
+
+    .i-restaurant a::before {
+        content: "";
+        background: url(https://s1-ecp.printrunner.com/1512/restaurant.svg) no-repeat center center/contain;
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+        top: -2px;
+    }
+
+    .i-candle a::before {
+        content: "";
+        background: url(https://s1-ecp.printrunner.com/1516/candle.svg) no-repeat center center/contain;
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+        top: -2px;
+    }
+
+    .i-cannabis a::before {
+        content: "";
+        background: url(https://s1-ecp.printrunner.com/1517/cannabis.svg) no-repeat center center/contain;
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+        top: -2px;
+    }
+
+    .i-health a::before {
+        content: "";
+        background: url(https://s1-ecp.printrunner.com/1518/healthcare.svg) no-repeat center center/contain;
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+        top: -2px;
+    }
+
     .submenu-link-item a {
         font-size: 13px;
         padding: 5px;
+        font-weight: 400;
+        margin-left: -5px;
+        margin-bottom: 4px;
+        line-height: 1.2;
+    }
+
+    .i-submenu-link-item a {
+        font-size: 13px;
+        padding: 5px;
+        padding-left: 37px;
         font-weight: 400;
         margin-left: -5px;
         margin-bottom: 4px;
@@ -535,6 +653,83 @@
         font-weight: 700;
         display: inline;
         vertical-align: middle;
+    }
+
+    .options-sub-menu {
+        padding-top: 20px;
+        padding-bottom: 30px;
+        position: relative;
+        display: none;
+        grid-template-columns: auto auto auto;
+        grid-row-gap: 20px;
+    }
+
+    .options-sub-menu-active {
+        display: grid;
+    }
+
+    .options-sub-container {
+        margin-top: 12px;
+    }
+
+    .o-submenu-link {
+        font-size: 13px;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 4px;
+        padding-bottom: 0;
+        position: relative;
+    }
+
+    .o-submenu-link a{
+        padding: 0;
+        display: inline-block;
+        position: relative;
+        padding-right: 4px;
+        padding-left: 32px;
+    }
+
+    .o-finish a::before {
+        content: "";
+        background: url(https://s1-ecp.printrunner.com/1514/special-finish.svg) no-repeat center center/contain;
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+        top: -2px;
+    }
+
+    .o-material a::before {
+        content: "";
+        background: url(https://s1-ecp.printrunner.com/1519/material.svg) no-repeat center center/contain;
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+        top: -2px;
+    }
+
+    .o-type a::before {
+        content: "";
+        background: url(https://s1-ecp.printrunner.com/1515/type.svg) no-repeat center center/contain;
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+        top: -2px;
+    }
+
+    .o-submenu-link-item a {
+        font-size: 13px;
+        padding: 5px;
+        padding-left: 37px;
+        font-weight: 400;
+        margin-left: -5px;
+        margin-bottom: 4px;
+        line-height: 1.2;
     }
 
     .label-active {
@@ -580,9 +775,8 @@
     }
 
     .brand-logo {
-        padding-right: 1.5rem;
-        width: 160px;
-        height: 48px;
+        padding-right: 0;
+        width: 60%;
     }
 
     .top-nav-search-box {
@@ -705,7 +899,7 @@
 
     .featured-dropdown {
         display: none;
-        max-height: 550px;
+        max-height: 600px;
         width: 100%;
     }
 
@@ -743,7 +937,7 @@
         padding-top: 10px;
         padding-bottom: 30px;
         position: relative;
-        display: grid;
+        display: none;
         grid-template-columns: auto auto auto auto auto;
     }
 
@@ -797,6 +991,31 @@
         position: absolute;
         bottom: 0;
         right: 0;
+    }
+    
+    .sellers-sub-menu-active {
+        display: grid;
+    }
+
+    .industry-sub-menu {
+        padding-top: 20px;
+        padding-bottom: 30px;
+        position: relative;
+        display: none;
+        grid-template-columns: auto auto auto auto auto;
+        grid-row-gap: 20px;
+    }
+
+    .industry-sub-menu-active {
+        display: grid;
+    }
+
+    .industry-sub-container {
+        margin-top: 12px;
+    }
+
+    .industry-sub-menu > *:last-child {
+        margin-top: -6rem;
     }
  
 }
