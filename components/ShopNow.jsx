@@ -302,7 +302,7 @@ function ShopNow() {
               </select>
             </li>
 
-            <li>
+            <li className="hidden lg:block">
               <b className="pl-4">How do you want to continue ?</b>
               <div className="flex flex-wrap justify-center pt-5 pb-5">
                 <div onClick={UploadAction} className=" mr-2 border hover:bg-bgcolor hover:text-primary hover:font-bold hover:font-mono hover:text-[14px]  focus:border-btncolor p-4 w-[155px] h-[90px]">
@@ -351,7 +351,7 @@ function ShopNow() {
               </div>
           </ul>
         </div>
-        <div className="flex flex-wrap space-x-6 justify-center p-5">
+        <div className="flex space-x-6 justify-center p-5">
           <div className="w-fit m-2 w-[155px] h-[90px]">
             <img
               className="m-auto w-[25px] h-[26px]"
@@ -375,7 +375,7 @@ function ShopNow() {
           </div>
         </div>
       </div>
-      <div className="lg:hidden fixed w-full p-8 flex justify-center bottom-0 bg-white">
+      <div style={{zIndex: 10}} className="lg:hidden fixed w-full p-8 flex justify-center bottom-0 bg-white">
         <div className="w-1/2 text-2xl">
           <h1 className="font-bold ml-10">&#36;{price}</h1>
           <p className="text-gray20 text-lg">Only &#36;{price} each</p>
