@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
   function BannerProducts(props){
     const productTypeName = props.productTypeName
@@ -15,7 +16,9 @@ import Image from "next/image"
           {productTypeDetails}
       </ul>
       <div className="hidden md:flex pr-[24px] pb-[24px] justify-end">
-        <button className="hidden md:block min-w-[160px] rounded bg-[#FF9B00] text-white p-[15px] text-[18px] font-bold mt-[16px]">SHOP NOW</button>
+          <Link href="/shopnow">
+            <button className="hidden md:block min-w-[160px] rounded bg-[#FF9B00] text-white p-[15px] text-[18px] font-bold mt-[16px]">SHOP NOW</button>
+        </Link>
       </div>
     </div>
     )
