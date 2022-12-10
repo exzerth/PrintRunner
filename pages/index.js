@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Meta />
-      <div className="flex items-center relative mb-6">
+      <div className="container mx-auto flex items-center relative mb-6">
         <HomeBanner />
       </div>
       <FeaturedProducts />

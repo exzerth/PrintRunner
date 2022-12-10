@@ -6,9 +6,9 @@ const Footer = () => {
   return (
     <>
     <footer className="bg-[#ebeef3] text-center py-[40px] text-gray20">
-        <div className="px-[15px]">
-            <div className="boxup flex flex-col items-center">
-                <div className="boxup-box flex flex-col grow items-center basis-auto mb-[40px]">
+        <div className="container mx-auto px-[15px] md:px-[24px] lg:flex lg:justify-between">
+            <div className="boxup flex flex-col md:flex-row items-center md:items-start lg:w-[65%]">
+                <div className="boxup-box flex flex-col grow items-center md:items-start basis-auto mb-[40px]">
                     <div className="font-bold mb-4 text-lg">Products & Services</div>
                     <a href="#" className="boxuplink font-normal leading-[200%] text-sm">All Products</a>
                     <a href="#" className="boxuplink font-normal leading-[200%] text-sm">Mailing Services</a>
@@ -17,7 +17,7 @@ const Footer = () => {
                     <a href="#" className="boxuplink font-normal leading-[200%] text-sm">Free File Review</a>
                     <a href="#" className="boxuplink font-normal leading-[200%] text-sm">Free Sample Kit</a>
                 </div>
-                <div className="boxup-box flex flex-col grow items-center basis-auto mb-[40px]">
+                <div className="boxup-box flex flex-col grow items-center md:items-start basis-auto mb-[40px]">
                     <div className="font-bold mb-4 text-lg">Help & Resources</div>
                     <a href="#" className="boxuplink font-normal leading-[200%] text-sm">Contact Us</a>
                     <a href="#" className="boxuplink font-normal leading-[200%] text-sm">Pickup Locations</a>
@@ -27,7 +27,7 @@ const Footer = () => {
                     <a href="#" className="boxuplink font-normal leading-[200%] text-sm">Help Center</a>
                     <a href="#" className="boxuplink font-normal leading-[200%] text-sm">Blog</a>
                 </div>
-                <div className="boxup-box flex flex-col grow items-center basis-auto mb-[40px]">
+                <div className="boxup-box flex flex-col grow items-center md:items-start basis-auto mb-[40px]">
                     <div className="font-bold mb-4 text-lg">PrintRunner.com</div>
                     <a href="#" className="boxuplink font-normal leading-[200%] text-sm">About Us</a>
                     <a href="#" className="boxuplink font-normal leading-[200%] text-sm">Terms & Conditions</a>
@@ -39,21 +39,21 @@ const Footer = () => {
                 </div>
             </div>
             <div className="boxdown">
-                <div>
-                    <div className="social text-center">
+                <div className='md:flex md:justify-between md:items-center lg:flex-col'>
+                    <div className="social text-center md:text-start md:self-start">
                         <div className="mb-[8px] font-bold text-[18px]">Join Us</div>
                         <div className="social_links text-primary text-[23px]">
-                            <a href="" className='inline-block'><FontAwesomeIcon icon={faFacebookF} className="mr-[35px]"/></a>
-                            <a href="" className='inline-block'><FontAwesomeIcon icon={faTwitter} className="mr-[35px]"/></a>
-                            <a href="" className='inline-block'><FontAwesomeIcon icon={faRss} className="mr-[35px]"/></a>
-                            <a href="" className='inline-block'><FontAwesomeIcon icon={faLinkedinIn} className="mr-[35px]"/></a>
+                            <a href="" className='inline-block'><FontAwesomeIcon icon={faFacebookF} className="mr-[35px] md:mr-[45px]"/></a>
+                            <a href="" className='inline-block'><FontAwesomeIcon icon={faTwitter} className="mr-[35px] md:mr-[45px]"/></a>
+                            <a href="" className='inline-block'><FontAwesomeIcon icon={faRss} className="mr-[35px] md:mr-[45px]"/></a>
+                            <a href="" className='inline-block'><FontAwesomeIcon icon={faLinkedinIn} className="mr-[35px] md:mr-[45px]"/></a>
                             <a href="" className='inline-block'><FontAwesomeIcon icon={faInstagram} className="mr-0"/></a>
                         </div>
                     </div>
-                    <div className="news mt-[40px]">
-                        <div className="newsbox mb-[20px] max-w-[400px]">
-                            <div className="mb-[8px] font-bold text-[18px]">Don&apos;t Miss Out</div>
-                            <p className='mb-[24px] leading-[19px] font-normal'>Exclusive offers and products are just a click away.</p>
+                    <div className="news mt-[40px] md:mt-[0]">
+                        <div className="newsbox mb-[20px] max-w-[400px] md:max-w-[350px]">
+                            <div className="mb-[8px] font-bold text-[18px] md:text-start">Don&apos;t Miss Out</div>
+                            <p className='mb-[24px] leading-[19px] font-normal md:text-[14px]'>Exclusive offers and products are just a click away.</p>
                             <form action="">
                                 <div className="formbox flex justify-between">
                                     <div className="forminput w-[100%]">

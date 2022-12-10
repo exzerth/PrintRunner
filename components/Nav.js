@@ -1,4 +1,5 @@
-/* import Link from "next/link"; */
+import Link from 'next/link'
+import { useRef } from 'react'
 import navStyles from '../styles/Nav.module.css'
 import Image from 'next/image'
 import logoImg from '../images/pr-logo.svg'
@@ -12,38 +13,46 @@ import {
   faShippingFast,
   faAngleDown,
 } from '@fortawesome/free-solid-svg-icons'
+import NavFeaturedLinks from './NavFeaturedLinks'
+import NavStickersLinks from './NavStickersLinks'
 
 const Nav = () => {
+  const menuRef = useRef(null)
+  const menuDropdownRef = useRef(null)
+  const accountRef = useRef(null)
+  const accountDropdownRef = useRef(null)
+  const searchOverlayRef = useRef(null)
+
   const toggleMenuDropdown = () => {
-    document.querySelector('.menu-box').classList.toggle('menu-box-active')
-    document.querySelector('.menu-icon').classList.toggle('middle-nav-active')
-    document
-      .querySelector('.menu-dropdown-wrapper')
-      .classList.toggle('menu-dropdown-show')
+    menuRef.current.classList.toggle(`${navStyles['menu-box-active']}`)
+    menuRef.current.children[0].classList.toggle(
+      `${navStyles['middle-nav-active']}`
+    )
+    menuDropdownRef.current.classList.toggle(
+      `${navStyles['menu-dropdown-show']}`
+    )
   }
 
   const toggleAccountDropdown = () => {
-    document
-      .querySelector('.account-box')
-      .classList.toggle('account-box-active')
-    document
-      .querySelector('.account-icon')
-      .classList.toggle('middle-nav-active')
-    document
-      .querySelector('.account-dropdown-wrapper')
-      .classList.toggle('account-dropdown-show')
+    accountRef.current.classList.toggle(`${navStyles['account-box-active']}`)
+    accountRef.current.children[0].classList.toggle(
+      `${navStyles['middle-nav-active']}`
+    )
+    accountDropdownRef.current.classList.toggle(
+      `${navStyles['account-dropdown-show']}`
+    )
   }
 
   const openSearchOverlay = () => {
-    document
-      .querySelector('.search-wrapper')
-      .classList.toggle('search-overlay-show')
+    searchOverlayRef.current.classList.toggle(
+      `${navStyles['search-overlay-show']}`
+    )
   }
 
   const closeSearchOverlay = () => {
-    document
-      .querySelector('.search-wrapper')
-      .classList.toggle('search-overlay-show')
+    searchOverlayRef.current.classList.toggle(
+      `${navStyles['search-overlay-show']}`
+    )
   }
 
   return (
@@ -52,15 +61,22 @@ const Nav = () => {
         <div className={navStyles['nav-wrapper']}>
           <div className={navStyles['nav-container']}>
             <div className={navStyles['top-nav']}>
-              <Image className={navStyles['brand-logo']} src={logoImg} alt="" />
+              <div className={navStyles['brand-logo']}>
+                <Link href="/">
+                  <Image src={logoImg} alt="" />
+                </Link>
+              </div>
               <div className={navStyles['top-nav-search-box']}>
-                <FontAwesomeIcon
-                  className={navStyles['top-nav-search-icon']}
-                  icon={faSearch}
-                />
+                <div className={navStyles['top-nav-search-icon-box']}>
+                  <FontAwesomeIcon
+                    className={navStyles['top-nav-search-icon']}
+                    icon={faSearch}
+                  />
+                </div>
                 <input
                   className={navStyles['top-nav-search-box-input']}
                   type="text"
+                  placeholder="Search (e.g. waterproof labels, vinyl banners, etc.)"
                 />
               </div>
               <div className={navStyles['top-nav-links-box']}>
@@ -71,67 +87,108 @@ const Nav = () => {
                   />
                   <a href="#services">Services</a>
                   <a href="#help">Help</a>
-                  <a href="#call">1-888-278-3120</a>
+                  <a className={navStyles['call-icon']} href="#call">
+                    1-888-278-3120
+                  </a>
                 </div>
                 <div className={navStyles['top-nav-links-box-lower']}>
-                  <a href="#accouunt">Account</a>
-                  <a href="#orders">My Orders</a>
-                  <a href="designs">My Designs</a>
-                  <a href="cart">Cart</a>
+                  <a
+                    className={navStyles['top-nav-accounts-icon']}
+                    href="#accouunt"
+                  >
+                    Account
+                  </a>
+                  <Link href="/form">My Orders</Link>
+                  <Link href="/form">My Designs</Link>
+                  <a className={navStyles['top-nav-cart-icon']} href="#cart">
+                    Cart
+                  </a>
                 </div>
               </div>
             </div>
 
             <div className={navStyles['middle-nav']}>
-              {/* make m-n-b into a component, 'menu-box', 'menu-icon', 'account-box' */}
-              <div
-                className={navStyles['middle-nav-boxes']}
-                onClick={toggleMenuDropdown}
-              >
-                <FontAwesomeIcon
-                  className={navStyles['middle-nav-icon']}
-                  icon={faBars}
-                />
-                <h3>Menu</h3>
+              {/* make m-n-b into a component*/}
+
+              {/* middle-nav desktop section start */}
+              <div className={navStyles['middle-nav-desktop']}>
+                <div className={navStyles['nav-desktop-wrapper']}>
+                  <ul className={navStyles['nav-desktop-list']}>
+                    <NavFeaturedLinks />
+                    <NavStickersLinks />
+                    <li className={navStyles['nav-desktop-list-link']}>
+                      <Link href="#marketing">Marketing Materials</Link>
+                    </li>
+                    <li className={navStyles['nav-desktop-list-link']}>
+                      <Link href="/banners">Signs & Banners</Link>
+                    </li>
+                    <li className={navStyles['nav-desktop-list-link']}>
+                      <Link href="#promotions">Promotional Products</Link>
+                    </li>
+                    <li className={navStyles['nav-desktop-list-link']}>
+                      <Link href="#packaging">Packaging</Link>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div
-                className={navStyles['middle-nav-boxes']}
-                onClick={openSearchOverlay}
-              >
-                <FontAwesomeIcon
-                  className={navStyles['middle-nav-icon']}
-                  icon={faSearch}
-                />
-                <h3>Search</h3>
-              </div>
-              <div className={navStyles['middle-nav-boxes']}>
-                <FontAwesomeIcon
-                  className={navStyles['middle-nav-icon']}
-                  icon={faPhone}
-                />
-                <h3>Call</h3>
-              </div>
-              <div
-                className={navStyles['middle-nav-boxes']}
-                onClick={toggleAccountDropdown}
-              >
-                <FontAwesomeIcon
-                  className={navStyles['middle-nav-icon']}
-                  icon={faUser}
-                />
-                <h3>Account</h3>
-              </div>
-              <div className={navStyles['middle-nav-boxes']}>
-                <FontAwesomeIcon
-                  className={navStyles['middle-nav-icon']}
-                  icon={faCartShopping}
-                />
-                <h3>Cart</h3>
+              {/* middle-nav desktop section end */}
+
+              <div className={navStyles['middle-nav-mobile']}>
+                <div
+                  ref={menuRef}
+                  className={navStyles['middle-nav-boxes']}
+                  onClick={toggleMenuDropdown}
+                >
+                  <FontAwesomeIcon
+                    id="menu-icon"
+                    className={navStyles['middle-nav-icon']}
+                    icon={faBars}
+                  />
+                  <h3>Menu</h3>
+                </div>
+                <div
+                  className={navStyles['middle-nav-boxes']}
+                  onClick={openSearchOverlay}
+                >
+                  <FontAwesomeIcon
+                    className={navStyles['middle-nav-icon']}
+                    icon={faSearch}
+                  />
+                  <h3>Search</h3>
+                </div>
+                <div className={navStyles['middle-nav-boxes']}>
+                  <FontAwesomeIcon
+                    className={navStyles['middle-nav-icon']}
+                    icon={faPhone}
+                  />
+                  <h3>Call</h3>
+                </div>
+                <div
+                  ref={accountRef}
+                  className={navStyles['middle-nav-boxes']}
+                  onClick={toggleAccountDropdown}
+                >
+                  <FontAwesomeIcon
+                    className={navStyles['middle-nav-icon']}
+                    icon={faUser}
+                  />
+                  <h3>Account</h3>
+                </div>
+                <div className={navStyles['middle-nav-boxes']}>
+                  <FontAwesomeIcon
+                    className={navStyles['middle-nav-icon']}
+                    icon={faCartShopping}
+                  />
+                  <h3>Cart</h3>
+                </div>
               </div>
             </div>
 
             {/* middle-nav-dropdowns and more */}
-            <div className={navStyles['menu-dropdown-wrapper']}>
+            <div
+              ref={menuDropdownRef}
+              className={navStyles['menu-dropdown-wrapper']}
+            >
               <ul className={navStyles['menu-dropdown-container']}>
                 <li>
                   <h6 className={navStyles['menu-dropdown-title']}>
@@ -139,41 +196,46 @@ const Nav = () => {
                   </h6>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className={navStyles['menu-dropdown-links']}
-                    href="#banners"
+                    href="/banners"
+                    onClick={toggleMenuDropdown}
                   >
                     Banners
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className={navStyles['menu-dropdown-links']}
-                    href="#business-cards"
+                    href="/business"
+                    onClick={toggleMenuDropdown}
                   >
                     Business Cards
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className={navStyles['menu-dropdown-links']}
-                    href="#flyers"
+                    href="/flyers"
+                    onClick={toggleMenuDropdown}
                   >
                     Flyers
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className={navStyles['menu-dropdown-links']}
-                    href="#labels"
+                    href="/label"
+                    onClick={toggleMenuDropdown}
                   >
                     Labels
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a
                     className={navStyles['menu-dropdown-links']}
                     href="#stickers"
+                    onClick={toggleMenuDropdown}
                   >
                     Stickers
                   </a>
@@ -182,6 +244,7 @@ const Nav = () => {
                   <a
                     className={navStyles['menu-dropdown-links']}
                     href="#carbonless-forms"
+                    onClick={toggleMenuDropdown}
                   >
                     Carbonless Forms
                   </a>
@@ -190,6 +253,7 @@ const Nav = () => {
                   <a
                     className={navStyles['menu-dropdown-links']}
                     href="#order-status"
+                    onClick={toggleMenuDropdown}
                   >
                     Check Order Status
                   </a>
@@ -198,19 +262,27 @@ const Nav = () => {
                   <a
                     className={navStyles['menu-dropdown-links']}
                     href="#contact"
+                    onClick={toggleMenuDropdown}
                   >
                     Contact Us
                   </a>
                 </li>
                 <li>
-                  <a className={navStyles['menu-dropdown-links']} href="#help">
+                  <a
+                    className={navStyles['menu-dropdown-links']}
+                    href="#help"
+                    onClick={toggleMenuDropdown}
+                  >
                     Help
                   </a>
                 </li>
               </ul>
             </div>
 
-            <div className={navStyles['account-dropdown-wrapper']}>
+            <div
+              ref={accountDropdownRef}
+              className={navStyles['account-dropdown-wrapper']}
+            >
               <ul className={navStyles['account-dropdown-container']}>
                 <li className={navStyles['login-btn']}>
                   <div className={navStyles['login-btn-box']}>
@@ -218,41 +290,41 @@ const Nav = () => {
                   </div>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className={navStyles['account-dropdown-links']}
-                    href="#order-status"
+                    href="/form"
                   >
                     Order Status
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className={navStyles['account-dropdown-links']}
-                    href="#quotes"
+                    href="/form"
                   >
                     Quotes
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className={navStyles['account-dropdown-links']}
-                    href="#saved"
+                    href="/form"
                   >
                     Saved Designs
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className={navStyles['account-dropdown-links']}
-                    href="#settings"
+                    href="/form"
                   >
                     Settings
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
 
-            <div className={navStyles['search-wrapper']}>
+            <div ref={searchOverlayRef} className={navStyles['search-wrapper']}>
               <div className={navStyles['search-container']}>
                 <FontAwesomeIcon
                   className={navStyles['search-icon']}
@@ -270,6 +342,10 @@ const Nav = () => {
                 </div>
               </div>
             </div>
+
+            {/* middle-nav desktop dropsdowns start */}
+
+            {/* middle-nav desktop dropsdowns end */}
             {/* middle-nav-dropdowns and more  ends*/}
 
             <div className={navStyles['bottom-nav']}>
