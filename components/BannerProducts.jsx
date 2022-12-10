@@ -7,8 +7,8 @@ import Link from "next/link"
     const productTypeDetails = props.productTypeDetails
 
    return(
-    <div className="relative w-full mb-[20px] border inline-block min-h-[350px]">
-      <Image src={productTypeImage} width={450} height={225} alt={productTypeName + 'Image'} />
+<Link href="/shopnow"> 
+<Image src={productTypeImage} width={450} height={225} alt={productTypeName + 'Image'} />
       <h1 className="text-xl text-primary pt-4 font-semibold text-[15px] pl-[8px] pb-[8px] md:text-[22px] md:text-center">
         {productTypeName}
       </h1>
@@ -20,7 +20,7 @@ import Link from "next/link"
             <button className="hidden md:block min-w-[160px] rounded bg-[#FF9B00] text-white p-[15px] text-[18px] font-bold mt-[16px]">SHOP NOW</button>
         </Link>
       </div>
-    </div>
+    </Link>
     )
   }
 
