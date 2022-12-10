@@ -16,7 +16,7 @@ function BannerHead(props){
 
       <div className='bg-bgcolor md:bg-transparent md:absolute top-0 h-[120px] pl-[5px]'>
           <div className="py-5">
-            <h1 className="text-2xl font-bold text-slate-800 p-[10px] ">{categoryTitle}</h1>
+            <h1 className="text-3xl font-bold text-gray20 p-[10px] ">{categoryTitle}</h1>
             <ul>
             <li className="text-[14px] md:text-[16px] md:mb-[4px]">
               <i className="text-blue-500 p-2">{check}</i> {categoryDescriptionOne}

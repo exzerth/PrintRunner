@@ -51,7 +51,7 @@ function ShopNow() {
     MainCalc()
   })
   return (
-    <div className="  lg:flex justify-center ">
+    <div className=" lg:flex justify-center">
       <div className="p-5 lg:w-1/2">
         <div className="pb-10">
           {/* Item Name  */}
@@ -188,9 +188,9 @@ function ShopNow() {
             </h1>
 
             <li className="border-b-2 flex flex-wrap w-full justify-between">
-              <b className="pl-4">Flat Width In feet</b>
+              <b className="pl-4 w-2/5 ">Flat Width In feet</b>
               <select
-                className="mr-5 bg-white outline-none"
+                className="bg-white outline-none text-right mr-5"
                 onChange={MainCalc}
                 ref={widthContainer}
               >
@@ -209,9 +209,9 @@ function ShopNow() {
               </select>
             </li>
             <li className="border-b-2 flex flex-wrap w-full justify-between">
-              <b className="pl-4">Flat Height In feet</b>
+              <b className="pl-4 w-2/5">Flat Height In feet</b>
               <select
-                className="mr-5 bg-white outline-none"
+                className="mr-5 bg-white outline-none text-right"
                 onChange={MainCalc}
                 ref={heightContainer}
               >
@@ -230,9 +230,9 @@ function ShopNow() {
               </select>
             </li>
             <li className="border-b-2 flex flex-wrap w-full justify-between">
-              <b className="pl-4">Number of Sides</b>
+              <b className="pl-4 w-2/5">Number of Sides</b>
               <select
-                className="mr-5 bg-white outline-none"
+                className="mr-5 bg-white outline-none text-right"
                 ref={sidesContainer}
                 onChange={MainCalc}
               >
@@ -242,9 +242,9 @@ function ShopNow() {
             </li>
 
             <li className="border-b-2 flex flex-wrap w-full justify-between">
-              <b className="pl-4">Quantity</b>
+              <b className="pl-4 w-2/5">Quantity</b>
               <select
-                className="mr-5 bg-white outline-none "
+                className="mr-5 bg-white outline-none text-right"
                 ref={quantityContainer}
                 onChange={MainCalc}
               >
@@ -264,9 +264,9 @@ function ShopNow() {
             </li>
 
             <li className="border-b-2 flex flex-wrap w-full justify-between">
-              <b className="pl-4">Finishing</b>
+              <b className="pl-4 w-2/5">Finishing</b>
               <select
-                className="mr-5 bg-white outline-none "
+                className="mr-5 bg-white outline-none text-right"
                 ref={finishingContainer}
                 onChange={MainCalc}
               >
@@ -279,9 +279,9 @@ function ShopNow() {
             </li>
 
             <li className="border-b-2 flex flex-wrap w-full justify-between">
-              <b className="pl-4">Material</b>
+              <b className="pl-4 w-2/5">Material</b>
               <select
-                className="mr-5 bg-white outline-none "
+                className="mr-5 bg-white outline-none text-right"
                 ref={materialContainer}
                 onInput={MainCalc}
               >
@@ -291,9 +291,9 @@ function ShopNow() {
             </li>
 
             <li className="md:border-b-2 flex flex-wrap w-full justify-between">
-              <b className="pl-4">Ready to Ship In</b>
+              <b className="pl-4 w-2/5">Ready to Ship In</b>
               <select
-                className="mr-5 bg-white outline-none "
+                className="mr-5 bg-white outline-none text-right"
                 ref={readyToShipContainer}
                 onInput={MainCalc}
               >
