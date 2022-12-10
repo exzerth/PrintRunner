@@ -4,7 +4,7 @@ import { faCircleQuestion } from '@fortawesome/free-regular-svg-icons'
 function Login() {
   const help = <FontAwesomeIcon icon={faCircleQuestion} />
   return (
-    <div className="lg:w-1/2 mt-10 mx-5 border-b-2 pb-5">
+    <div className="lg:w-1/2 my-5 mx-5 lg:mx-0 lg:pr-10 pb-2 lg:mt-10">
       <h1 className="text-primary font-bold text-xl lg:text-3xl">Login</h1>
       <h3 className="text-primary font-bold text-lg">Returning Customer</h3>
       <form className="mt-10 lg:mt-5 mb-4 space-y-3 lg:space-y-5">

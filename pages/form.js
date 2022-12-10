@@ -7,7 +7,7 @@ function form() {
   return (
     <>
       <Meta />
-      <div className="container mx-auto mt-10 lg:flex lg:w-3/4">
+      <div className="container mx-auto mt-10 lg:flex lg:w-11/12">
         <Login />
         <Signup />
       </div>

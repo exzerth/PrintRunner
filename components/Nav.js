@@ -98,8 +98,8 @@ const Nav = () => {
                   >
                     Account
                   </a>
-                  <a href="#orders">My Orders</a>
-                  <a href="#designs">My Designs</a>
+                  <Link href="/form">My Orders</Link>
+                  <Link href="/form">My Designs</Link>
                   <a className={navStyles['top-nav-cart-icon']} href="#cart">
                     Cart
                   </a>
@@ -290,36 +290,36 @@ const Nav = () => {
                   </div>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className={navStyles['account-dropdown-links']}
-                    href="#order-status"
+                    href="/form"
                   >
                     Order Status
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className={navStyles['account-dropdown-links']}
-                    href="#quotes"
+                    href="/form"
                   >
                     Quotes
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className={navStyles['account-dropdown-links']}
-                    href="#saved"
+                    href="/form"
                   >
                     Saved Designs
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className={navStyles['account-dropdown-links']}
-                    href="#settings"
+                    href="/form"
                   >
                     Settings
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

@@ -6,7 +6,7 @@ function Signup() {
   const help = <FontAwesomeIcon icon={faCircleQuestion} />
 
   return (
-    <div className="lg:w-1/2 mt-5 lg:px-10 border-b-2 pb-2 lg:mt-10 lg:border-l-2">
+    <div className="lg:w-1/2 my-5 mx-5 lg:mx-0 lg:pl-10 pb-2 lg:mt-10 lg:border-l-2">
       <h1 className="text-primary font-bold text-xl lg:text-3xl">
         Registration
       </h1>
@@ -60,7 +60,7 @@ function Signup() {
           CREATE ACCOUNT
         </button>
       </form>
-      <p className="text-sm">
+      <p className="text-sm lg:text-[16px]">
         By clicking <q>Create Account</q> you are agreeing to {"PrintRunner's "}
         <a className="text-primary hover:cursor-pointer">Terms & Conditions </a>
         and <a className="text-primary hover:cursor-pointer">Privacy Policy</a>.
