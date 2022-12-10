@@ -746,6 +746,48 @@
         height: 3px;
         background: #247ECA;
     }
+
+    .stickers-dropdown {
+        display: none;
+        color: #333;
+        max-height: 900px;
+        background: white;
+        position: absolute;
+        left: 0;
+        min-width: 264px;
+        min-height: 200px;
+        width: 100%;
+        padding: 20px;
+        z-index: 2;
+        box-shadow: 0 3px 3px rgb(0 0 0 / 25%);
+    }
+
+    .stickers-dropdown-show {
+        display: block;
+        z-index: 2;
+    }
+
+    .stickers-sub-menu {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 45px;
+    }
+
+    .stickers-link {
+        font-size: 13px;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 4px;
+        padding-bottom: 0;
+        position: relative;
+    }
+
+    .stickers-link a{
+        padding: 0;
+        display: inline-block;
+        position: relative;
+        padding-right: 4px;
+    }
  
 }
 
@@ -895,6 +937,11 @@
     .top-nav-links-box-upper a, .top-nav-links-box-lower a {
         text-decoration: none;
         color: #333;
+    }
+
+    .nav-desktop-list-link > a {
+        padding: 16px 10px;
+        font-size: 13px;
     }
 
     .featured-dropdown {
@@ -1054,6 +1101,11 @@
 
     .top-nav-links-box-lower {
         gap: 30px;
+    }
+
+    .nav-desktop-list-link > a {
+        padding: 21px 20px;
+        font-size: 14px;
     }
  
 }
