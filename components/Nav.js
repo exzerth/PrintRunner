@@ -14,6 +14,7 @@ import {
   faAngleDown,
 } from '@fortawesome/free-solid-svg-icons'
 import NavFeaturedLinks from './NavFeaturedLinks'
+import NavStickersLinks from './NavStickersLinks'
 
 const Nav = () => {
   const menuRef = useRef(null)
@@ -61,7 +62,9 @@ const Nav = () => {
           <div className={navStyles['nav-container']}>
             <div className={navStyles['top-nav']}>
               <div className={navStyles['brand-logo']}>
-                <Link href="/"><Image src={logoImg} alt="" /></Link>
+                <Link href="/">
+                  <Image src={logoImg} alt="" />
+                </Link>
               </div>
               <div className={navStyles['top-nav-search-box']}>
                 <div className={navStyles['top-nav-search-icon-box']}>
@@ -111,10 +114,8 @@ const Nav = () => {
               <div className={navStyles['middle-nav-desktop']}>
                 <div className={navStyles['nav-desktop-wrapper']}>
                   <ul className={navStyles['nav-desktop-list']}>
-                    <NavFeaturedLinks/>
-                    <li className={navStyles['nav-desktop-list-link']}>
-                      <Link href="/label">Stickers & Labels</Link>
-                    </li>
+                    <NavFeaturedLinks />
+                    <NavStickersLinks />
                     <li className={navStyles['nav-desktop-list-link']}>
                       <Link href="#marketing">Marketing Materials</Link>
                     </li>
@@ -343,8 +344,6 @@ const Nav = () => {
             </div>
 
             {/* middle-nav desktop dropsdowns start */}
-
-            
 
             {/* middle-nav desktop dropsdowns end */}
             {/* middle-nav-dropdowns and more  ends*/}
