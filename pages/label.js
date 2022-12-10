@@ -15,7 +15,7 @@ export default function label({
   categoryDescriptionThree,
   productTypeName,
   productTypeImage,
-  productTypeDetails,
+  productTypeDetails
 }) {
   bgImage = flyerHero
   categoryTitle = 'Label Printing'
@@ -29,7 +29,7 @@ export default function label({
   return (
     <>
       <Meta />
-      <div className="container my-0 mx-auto">
+      <div className="container my-0 mx-auto lg:w-4/5">
         <BannerHead
           bgImage={bgImage}
           categoryTitle={categoryTitle}
@@ -44,7 +44,7 @@ export default function label({
               categoryHeaderSubtitle="The go-to choices for our label customers"
             />
             <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-4">
-              {labelsCategory.label.popular.map((label) => (
+              {labelsCategory.label.popular.map(label => (
                 <BannerProducts
                   key={label.name}
                   productTypeName={label.name}
@@ -62,7 +62,7 @@ export default function label({
               categoryHeaderSubtitle="Find the best personalized label for your project or business"
             />
             <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-4">
-              {labelsCategory.label.type.map((label) => (
+              {labelsCategory.label.type.map(label => (
                 <BannerProducts
                   key={label.name}
                   productTypeName={label.name}
@@ -80,7 +80,7 @@ export default function label({
               categoryHeaderSubtitle="Get the exact shape and size you need"
             />
             <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-4">
-              {labelsCategory.label.shape.map((label) => (
+              {labelsCategory.label.shape.map(label => (
                 <BannerProducts
                   key={label.name}
                   productTypeName={label.name}
@@ -93,7 +93,7 @@ export default function label({
               categoryHeaderSubtitle="Choose the best use for your project"
             />
             <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-4">
-              {labelsCategory.label.use.map((label) => (
+              {labelsCategory.label.use.map(label => (
                 <BannerProducts
                   key={label.name}
                   productTypeName={label.name}
@@ -111,7 +111,7 @@ export default function label({
               categoryHeaderSubtitle="Print on several high quality choices"
             />
             <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-4">
-              {labelsCategory.label.material.map((label) => (
+              {labelsCategory.label.material.map(label => (
                 <BannerProducts
                   key={label.name}
                   productTypeName={label.name}

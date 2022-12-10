@@ -13,7 +13,7 @@ export default function business({
   categoryDescriptionThree,
   productTypeName,
   productTypeImage,
-  productTypeDetails,
+  productTypeDetails
 }) {
   bgImage = businessHero
   categoryTitle = 'Business Cards'
@@ -27,7 +27,7 @@ export default function business({
   return (
     <>
       <Meta />
-      <div className="container my-0 mx-auto">
+      <div className="container my-0 mx-auto lg:w-4/5">
         <BannerHead
           bgImage={bgImage}
           categoryTitle={categoryTitle}
@@ -38,7 +38,7 @@ export default function business({
         <div className="container mt-5">
           <div className="w-full flex justify-center px-[15px] md:px-[24px] flex-wrap">
             <div className="columns-2 lg:columns-3 w-full">
-              {businessCategory.business.map((business) => (
+              {businessCategory.business.map(business => (
                 <BannerProducts
                   key={business.name}
                   productTypeName={business.name}
