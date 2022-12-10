@@ -2,40 +2,19 @@ import categories from '../utils/categories.json'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBinoculars, faCheck } from '@fortawesome/free-solid-svg-icons'
 
-function Banner() {
-  const check = <FontAwesomeIcon icon={faCheck} />
-  const binoculars = <FontAwesomeIcon icon={faBinoculars} />
+function BannerDescription() {
+ const binoculars = <FontAwesomeIcon icon={faBinoculars} />
   return (
-    <div>
-      <div className="bg-blue-100 h-28">
-        <h1 className="text-3xl font-semibold p-2 ">Banner Printing</h1>
-        <p>
-          <i className="text-blue-500 p-2">{check}</i> Banner printing services
-          to promote your brand
-        </p>
-      </div>
-      <div className="flex justify-center mt-5 flex-wrap">
-        {categories.banners.map((banner) => (
-          <div key={banner.name} className="m-2 w-40 min-h-max p-5 border">
-            <img src={banner.image} alt={banner.name + 'Image'} />
-            <h1 className="text-xl text-blue-500 pt-4 font-semibold">
-              {banner.name}
-            </h1>
-            <ul className="mt-5 list-disc ">
-              {banner.details.map((detail, index) => (
-                <li key={index}>{detail}</li>
-              ))}
-            </ul>
+    <div  className='flex mb-20 w-[100%] justify-center md:px-[24px]'>
+      <div className='md:border-2 mt-20'>
+        <div className="h-20 bg-gray-200">
+          <div className="flex w-36 border-t-4 border-blue-500 bg-blue-100 p-5 text-blue-500 flex-col justify-center text-2xl h-20">
+            <i className="text-center">{binoculars}</i>
+            <h3 className="font-semibold">Overview</h3>
           </div>
-        ))}
-      </div>
-      <div className="mt-20 h-20 border bg-gray-200">
-        <div className="absolute flex border-t-4 border-blue-500 bg-blue-100 p-5 text-blue-500 flex-col justify-center text-2xl h-20">
-          <i className="text-center">{binoculars}</i>
-          <h3 className="font-semibold">Overview</h3>
         </div>
-        <div className="m-4">
-          <h1 className="font-medium text-slate-900 text-2xl mt-24">
+        <div className="m-4 mt-10 mb-20  ">
+          <h1 className="font-medium text-slate-900 text-2xl">
             Banner Printing for Every Season and Situation
           </h1>
           <p className="mt-5 text-slate-900">
@@ -111,8 +90,8 @@ function Banner() {
             </a>
           </p>
         </div>
-      </div>
+      </div>   
     </div>
   )
 }
-export default Banner
+export default BannerDescription

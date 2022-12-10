@@ -11,7 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: .8rem .9rem .4rem .9rem;
+    padding: .8rem .9rem;
 }
 
 .top-nav-search-box {
@@ -22,7 +22,11 @@
     display: none;
 }
 
-.middle-nav {
+.middle-nav-desktop {
+    display: none;
+}
+
+.middle-nav-mobile {
     background-color: #EBEEF2;
     display: flex;
     justify-content: space-between;
@@ -236,8 +240,12 @@
     padding: 0.063rem 3rem;
 }
 
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 767px) {
+
     .top-nav {
+        padding-left: 24px;
+        padding-right: 24px;
+        min-height: 88px;
         display: flex;
         flex-grow: 5;
         justify-content: space-between;
@@ -245,38 +253,71 @@
         color: #333;
     }
 
+    .top-nav-links-box-upper a:nth-child(2) {
+        display: none;
+    }
+
+    .services-angle-down {
+        display: none;
+    }
+
+    .top-nav-links-box-lower a:nth-child(2) {
+        display: none;
+    }
+
+    .top-nav-links-box-lower a:nth-child(3) {
+        display: none;
+    }
+
     .brand-logo {
-        padding-right: 2rem;
+        padding-right: 1rem;
+        width: 60%;
     }
 
     .top-nav-search-box {
-        display: block;
-        width: 100%;
+        display: flex;
+        flex-grow: 0;
+        flex-basis: 5;
+        width: 150%;
         margin: .5rem;
         position: relative;
         height: 40px;
     }
 
-    .top-nav-search-icon {
+    .top-nav-search-icon-box {
+        background-color: #247ECA;
         position: absolute;
         top: 0;
         bottom: 0;
         right: 0;
         margin: auto 0;
         vertical-align: middle;
-        background-color: #1876D1;
         color: #fff;
         height: 100%;
+        width: 40px;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
+    }
+
+    .top-nav-search-icon {
+        display: block;
+        position: absolute;
+        left: 30%;
+        top: 30%;
     }
 
     .top-nav-search-box-input {
         width: 100%;
         height: 40px;
+        padding: 1px 46px 1px 16px;
         border-radius: 10px;
         border: 1px solid #1876D1;
         outline: none;
+    }
+
+    .top-nav-search-box-input::placeholder {
+        font-size: 14px;
+        opacity: .7;
     }
     
     .top-nav-links-box {
@@ -292,20 +333,576 @@
         align-items: center;
         gap: 30px;
         padding-bottom: 1rem;
+        margin-top: -0.8rem;
+        position: relative;
+    }
+
+    .call-icon::before {
+        content: "";
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background: url(https://s1-ecp.printrunner.com/1499/phone.svg) no-repeat center center/contain;
+        vertical-align: middle;
+        margin-right: 8px;
+    }
+
+    .top-nav-links-box-lower {
+        font-size: 15px;
+        font-weight: 400;
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+
+    .top-nav-accounts-icon::before {
+        content: "";
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        background: url(https://s1-ecp.printrunner.com/1496/user.svg) no-repeat center center/contain;
+        vertical-align: middle;
+        margin-right: 12px;
+    }
+
+    .top-nav-cart-icon::before {
+        content: "";
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        vertical-align: middle;
+        background: url(https://s1-ecp.printrunner.com/1495/cart.svg) no-repeat center center/contain;
+        margin-right: 12px;
+    }
+
+    .top-nav-links-box-upper a, .top-nav-links-box-lower a {
+        text-decoration: none;
+        color: #333;
+        font-size: 14px;
+    }
+
+    .middle-nav-mobile {
+        display: none;
+    }
+
+    .middle-nav-desktop {
+        display: flex;
+        background-color: #0F4C8D;
+    }
+
+    .nav-desktop-wrapper {
+        padding: 0 24px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-desktop-list {
+        list-style: none;
+        font-size: 12px;
+        font-weight: 600;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .nav-desktop-list-link {
+        color: #fff;
+    }
+
+    .desktop-link-active {
+        background-color: #f7f7f7;
+        color: #247ECA;
+    }
+
+    .nav-desktop-list-link a {
+        display: inline-block;
+        padding: 16px 4px;
+    }
+
+    .nav-desktop-list-link:first-child::after {
+        content: "\25bd";
+        font-size: 0.85em;
+        color: #FF9B00;
+        font-weight: 400;
+    }
+
+    .featured-dropdown {
+        display: none;
+        color: #333;
+        max-height: 900px;
+        background: white;
+        position: absolute;
+        min-width: 264px;
+        min-height: 200px;
+        width: auto;
+        padding: 20px;
+        z-index: 2;
+        box-shadow: 0 3px 3px rgb(0 0 0 / 25%);
+    }
+
+    .featured-dropdown-show {
+        display: block;
+        z-index: 2;
+    }
+
+    .featured-dropdown-tabmenu {
+        position: relative;
+    }
+
+    .tabmenu-item {
+        color: #999999;
+        display: inline-block;
+        font-size: 14px;
+        vertical-align: middle;
+        padding: 18px;
+        padding-top: 0;
+        font-weight: 600;
+        cursor: pointer;
+        margin-right: 80px;
+        position: relative;
+    }
+
+    .featured-tabmenu-content {
+        font-size: 16px;
+        border-top: 1px solid #dcdcdc;
+        position: relative;
+    }
+
+    .sellers-sub-menu {
+        padding-top: 10px;
+        padding-bottom: 30px;
+        position: relative;
+        display: none;
+        grid-template-columns: auto auto auto;
+    }
+
+    .sellers-sub-menu-active {
+        display: grid;
+    }
+
+    .sellers-sub-container {
+        margin-top: 12px;
+    }
+
+    .industry-sub-menu {
+        padding-top: 20px;
+        padding-bottom: 30px;
+        position: relative;
+        display: none;
+        grid-template-columns: auto auto auto;
+        grid-row-gap: 20px;
+    }
+
+    .industry-sub-menu-active {
+        display: grid;
+    }
+
+    .industry-sub-container {
+        margin-top: 12px;
+    }
+
+    .submenu-link {
+        font-size: 13px;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 4px;
+        padding-bottom: 0;
+        position: relative;
+    }
+
+    .submenu-link a{
+        padding: 0;
+        display: inline-block;
+        position: relative;
+        padding-right: 4px;
+    }
+
+    .submenu-link a::after {
+        content: "\25b7";
+        font-size: 0.85em;
+        margin-left: 8px;
+        color: inherit;
+        font-weight: 700;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(100%, -45%);
+    }
+
+    .i-submenu-link {
+        font-size: 13px;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 4px;
+        padding-bottom: 0;
+        position: relative;
+    }
+
+    .i-submenu-link a{
+        padding: 0;
+        display: inline-block;
+        position: relative;
+        padding-right: 4px;
+        padding-left: 32px;
+    }
+
+    .i-realestate a::before {
+        content: "";
+        background: url(https://s1-ecp.printrunner.com/1520/real-estate.svg) no-repeat center center/contain;
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+        top: -2px;
+    }
+
+    .i-retail a::before {
+        content: "";
+        background: url(https://s1-ecp.printrunner.com/1513/retail.svg) no-repeat center center/contain;
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+        top: -2px;
+    }
+
+    .i-restaurant a::before {
+        content: "";
+        background: url(https://s1-ecp.printrunner.com/1512/restaurant.svg) no-repeat center center/contain;
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+        top: -2px;
+    }
+
+    .i-candle a::before {
+        content: "";
+        background: url(https://s1-ecp.printrunner.com/1516/candle.svg) no-repeat center center/contain;
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+        top: -2px;
+    }
+
+    .i-cannabis a::before {
+        content: "";
+        background: url(https://s1-ecp.printrunner.com/1517/cannabis.svg) no-repeat center center/contain;
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+        top: -2px;
+    }
+
+    .i-health a::before {
+        content: "";
+        background: url(https://s1-ecp.printrunner.com/1518/healthcare.svg) no-repeat center center/contain;
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+        top: -2px;
+    }
+
+    .submenu-link-item a {
+        font-size: 13px;
+        padding: 5px;
+        font-weight: 400;
+        margin-left: -5px;
+        margin-bottom: 4px;
+        line-height: 1.2;
+    }
+
+    .i-submenu-link-item a {
+        font-size: 13px;
+        padding: 5px;
+        padding-left: 37px;
+        font-weight: 400;
+        margin-left: -5px;
+        margin-bottom: 4px;
+        line-height: 1.2;
+    }
+
+    .submenu-see-all {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 0 !important;
+        display: block;
+        font-size: 13px;
+        margin: 0;
+        font-weight: 700;
+    }
+
+    .submenu-see-all::after {
+        content: "\25b7";
+        font-size: 0.85em;
+        margin-left: 8px;
+        color: inherit;
+        font-weight: 700;
+        display: inline;
+        vertical-align: middle;
+    }
+
+    .options-sub-menu {
+        padding-top: 20px;
+        padding-bottom: 30px;
+        position: relative;
+        display: none;
+        grid-template-columns: auto auto auto;
+        grid-row-gap: 20px;
+    }
+
+    .options-sub-menu-active {
+        display: grid;
+    }
+
+    .options-sub-container {
+        margin-top: 12px;
+    }
+
+    .o-submenu-link {
+        font-size: 13px;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 4px;
+        padding-bottom: 0;
+        position: relative;
+    }
+
+    .o-submenu-link a{
+        padding: 0;
+        display: inline-block;
+        position: relative;
+        padding-right: 4px;
+        padding-left: 32px;
+    }
+
+    .o-finish a::before {
+        content: "";
+        background: url(https://s1-ecp.printrunner.com/1514/special-finish.svg) no-repeat center center/contain;
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+        top: -2px;
+    }
+
+    .o-material a::before {
+        content: "";
+        background: url(https://s1-ecp.printrunner.com/1519/material.svg) no-repeat center center/contain;
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+        top: -2px;
+    }
+
+    .o-type a::before {
+        content: "";
+        background: url(https://s1-ecp.printrunner.com/1515/type.svg) no-repeat center center/contain;
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        left: 0;
+        top: -2px;
+    }
+
+    .o-submenu-link-item a {
+        font-size: 13px;
+        padding: 5px;
+        padding-left: 37px;
+        font-weight: 400;
+        margin-left: -5px;
+        margin-bottom: 4px;
+        line-height: 1.2;
+    }
+
+    .label-active {
+        color: #247ECA
+    }
+
+    .label-active::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: #247ECA;
+    }
+
+    .stickers-dropdown {
+        display: none;
+        color: #333;
+        max-height: 900px;
+        background: white;
+        position: absolute;
+        left: 0;
+        min-width: 264px;
+        min-height: 200px;
+        width: 100%;
+        padding: 20px;
+        z-index: 2;
+        box-shadow: 0 3px 3px rgb(0 0 0 / 25%);
+    }
+
+    .stickers-dropdown-show {
+        display: block;
+        z-index: 2;
+    }
+
+    .stickers-sub-menu {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 45px;
+    }
+
+    .stickers-link {
+        font-size: 13px;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 4px;
+        padding-bottom: 0;
+        position: relative;
+    }
+
+    .stickers-link a{
+        padding: 0;
+        display: inline-block;
+        position: relative;
+        padding-right: 4px;
+    }
+ 
+}
+
+@media screen and (min-width: 1020px) {
+
+    .top-nav-links-box-upper a:nth-child(2) {
+        display: block;
+    }
+
+    .top-nav-links-box-lower a:nth-child(2) {
+        display: block;
+    }
+
+    .top-nav-links-box-lower a:nth-child(3) {
+        display: block;
+    }
+
+    .top-nav {
+        padding-left: 24px;
+        padding-right: 24px;
+        min-height: 88px;
+        display: flex;
+        flex-grow: 5;
+        justify-content: space-between;
+        align-items: center;
+        color: #333;
+    }
+
+    .brand-logo {
+        padding-right: 0;
+        width: 60%;
+    }
+
+    .top-nav-search-box {
+        display: flex;
+        flex-grow: 0;
+        flex-basis: 5;
+        width: 100%;
+        margin: .5rem;
+        position: relative;
+        height: 40px;
+    }
+
+    .top-nav-search-icon-box {
+        background-color: #247ECA;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto 0;
+        vertical-align: middle;
+        color: #fff;
+        height: 100%;
+        width: 40px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .top-nav-search-icon {
+        align-self: center;
+    }
+
+    .top-nav-search-box-input {
+        width: 100%;
+        height: 40px;
+        padding: 1px 46px 1px 16px;
+        border-radius: 10px;
+        border: 1px solid #1876D1;
+        outline: none;
+    }
+
+    .top-nav-search-box-input::placeholder {
+        font-size: 14px;
+        opacity: .7;
+    }
+    
+    .top-nav-links-box {
+        display: block;
+        width: 100%;
+    }
+
+    .top-nav-links-box-upper {
+        font-size: 15px;
+        font-weight: 400;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 30px;
+        padding-bottom: 1rem;
+        margin-top: -0.8rem;
         position: relative;
     }
 
     .services-angle-down {
+        display: inline-block;
         position: absolute;
-        top: 0;
-        right: 12.7rem;
+        right: 14rem;
         font-weight: 400;
         margin: auto 0;
         vertical-align: middle;
         color: #333;
     }
 
+    .call-icon::before {
+        content: "";
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background: url(https://s1-ecp.printrunner.com/1499/phone.svg) no-repeat center center/contain;
+        vertical-align: middle;
+        margin-right: 8px;
+    }
+
     .top-nav-links-box-upper a:nth-child(3) {
+        display: block;
         padding-left: 1.5rem;
     }
 
@@ -313,8 +910,28 @@
         font-size: 15px;
         font-weight: 400;
         display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+
+    .top-nav-accounts-icon::before {
+        content: "";
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        background: url(https://s1-ecp.printrunner.com/1496/user.svg) no-repeat center center/contain;
+        vertical-align: middle;
+        margin-right: 12px;
+    }
+
+    .top-nav-cart-icon::before {
+        content: "";
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        vertical-align: middle;
+        background: url(https://s1-ecp.printrunner.com/1495/cart.svg) no-repeat center center/contain;
+        margin-right: 12px;
     }
 
     .top-nav-links-box-upper a, .top-nav-links-box-lower a {
@@ -322,5 +939,173 @@
         color: #333;
     }
 
+    .nav-desktop-list-link > a {
+        padding: 16px 10px;
+        font-size: 13px;
+    }
+
+    .featured-dropdown {
+        display: none;
+        max-height: 600px;
+        width: 100%;
+    }
+
+    .featured-dropdown-show {
+        display: block;
+        z-index: 2;
+    }
+
+    .featured-dropdown-tabmenu {
+        position: relative;
+        text-align: center;
+    }
+
+    .tabmenu-item {
+        color: #247ECA;
+        display: inline-block;
+        font-size: 14px;
+        vertical-align: middle;
+        padding: 18px;
+        padding-top: 0;
+        font-weight: 600;
+        cursor: pointer;
+        margin-right: 80px;
+        position: relative;
+    }
+
+    .featured-tabmenu-content {
+        font-size: 16px;
+        border-top: 1px solid #dcdcdc;
+        position: relative;
+        text-align: start;
+    }
+
+    .sellers-sub-menu {
+        padding-top: 10px;
+        padding-bottom: 30px;
+        position: relative;
+        display: none;
+        grid-template-columns: auto auto auto auto auto;
+    }
+
+    .sellers-sub-menu > *:nth-last-child(2) {
+        margin-top: -4rem;
+    }
+
+    .sellers-sub-container {
+        margin-top: 12px;
+    }
+
+    .submenu-link {
+        font-size: 13px;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 4px;
+        padding-bottom: 0;
+        position: relative;
+    }
+
+    .submenu-link a{
+        padding: 0;
+        display: inline-block;
+        position: relative;
+        padding-right: 4px;
+    }
+
+    .submenu-link a::after {
+        content: "\25b7";
+        font-size: 0.85em;
+        margin-left: 8px;
+        color: inherit;
+        font-weight: 700;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(100%, -45%);
+    }
+
+    .submenu-link-item a {
+        font-size: 13px;
+        padding: 5px;
+        font-weight: 400;
+        margin-left: -5px;
+        margin-bottom: 4px;
+        line-height: 1.2;
+    }
+
+    .submenu-see-all {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
     
+    .sellers-sub-menu-active {
+        display: grid;
+    }
+
+    .industry-sub-menu {
+        padding-top: 20px;
+        padding-bottom: 30px;
+        position: relative;
+        display: none;
+        grid-template-columns: auto auto auto auto auto;
+        grid-row-gap: 20px;
+    }
+
+    .industry-sub-menu-active {
+        display: grid;
+    }
+
+    .industry-sub-container {
+        margin-top: 12px;
+    }
+
+    .industry-sub-menu > *:last-child {
+        margin-top: -6rem;
+    }
+ 
+}
+
+@media screen and (min-width: 1280px) {
+
+    .nav-desktop-wrapper {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .top-nav {
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    .top-nav-search-box {
+        width: 105%;
+    }
+
+    .top-nav-search-box-input::placeholder {
+        font-size: 16px;
+    }
+
+    .top-nav-links-box-upper {
+        gap: 40px;
+    }
+
+    .services-angle-down {
+        right: 15.7rem;
+    }
+
+    .top-nav-links-box-upper a:nth-child(3) {
+        padding-left: 1.5rem;
+    }
+
+    .top-nav-links-box-lower {
+        gap: 30px;
+    }
+
+    .nav-desktop-list-link > a {
+        padding: 21px 20px;
+        font-size: 14px;
+    }
+ 
 }
