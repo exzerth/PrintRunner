@@ -15,6 +15,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import NavFeaturedLinks from './NavFeaturedLinks'
 import NavStickersLinks from './NavStickersLinks'
+import NavMarketingLinks from './NavMarketingLinks'
+import NavSignsLinks from './NavSignsLinks'
+import NavPromoLinks from './NavPromoLinks'
+import NavPackageLinks from './NavPackageLinks'
 
 const Nav = () => {
   const menuRef = useRef(null)
@@ -116,18 +120,10 @@ const Nav = () => {
                   <ul className={navStyles['nav-desktop-list']}>
                     <NavFeaturedLinks />
                     <NavStickersLinks />
-                    <li className={navStyles['nav-desktop-list-link']}>
-                      <Link href="#marketing">Marketing Materials</Link>
-                    </li>
-                    <li className={navStyles['nav-desktop-list-link']}>
-                      <Link href="/banners">Signs & Banners</Link>
-                    </li>
-                    <li className={navStyles['nav-desktop-list-link']}>
-                      <Link href="#promotions">Promotional Products</Link>
-                    </li>
-                    <li className={navStyles['nav-desktop-list-link']}>
-                      <Link href="#packaging">Packaging</Link>
-                    </li>
+                    <NavMarketingLinks />
+                    <NavSignsLinks />
+                    <NavPromoLinks />
+                    <NavPackageLinks />
                   </ul>
                 </div>
               </div>
@@ -353,7 +349,12 @@ const Nav = () => {
                 className={navStyles['shipping-icon']}
                 icon={faShippingFast}
               />
-              <span>Enjoy FREE Shipping over $69</span>
+              <span>
+                Enjoy FREE Shipping over $69 &nbsp;
+                <Link href="/shipping" className="underline pl-2">
+                  See Details
+                </Link>
+              </span>
             </div>
           </div>
         </div>
