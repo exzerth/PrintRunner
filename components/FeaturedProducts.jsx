@@ -1,4 +1,3 @@
-import cardStyles from "../styles/FeaturedProducts.module.css"
 import ProductsCard from "./ProductsCard"
 
 const FeaturedProducts = () => {

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import navStyles from '../styles/Nav.module.css'
 
 const NavStickersLinks = () => {
