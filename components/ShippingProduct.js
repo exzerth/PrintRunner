@@ -1,11 +1,6 @@
-import Image from 'next/image'
-import Link from 'next/link'
 import React from 'react'
 import shipping from '../utils/shipping.json'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 function ShippingProduct() {
-  const rightArrow = <FontAwesomeIcon icon={faAngleRight} />
   return (
     <div>
       <h1 className="my-10 font-semibold text-2xl text-center">
@@ -25,44 +20,6 @@ function ShippingProduct() {
             </div> */}
           </div>
         ))}
-      </div>
-      <div className="mt-5 space-y-5 lg:space-y-0 mx-5 lg:mx-auto lg:flex justify-center">
-        <div className="flex lg:w-1/2 ">
-          <Image
-            src="https://s1-ecp.printrunner.com/607/Design%20Online.svg"
-            alt="designImage"
-            width={70}
-            height={70}
-          />
-          <div className="pl-5 w-9/12">
-            <h1 className="font-semibold text-2xl">Design Tool</h1>
-            <p>
-              Create print-ready projects from scratch. Access the image library
-              through the online design tool
-            </p>
-            <Link href="/design" className="block mt-2 text-primary">
-              Learn More {rightArrow}
-            </Link>
-          </div>
-        </div>
-        <div className="flex lg:w-1/2">
-          <Image
-            src="https://s1-ecp.printrunner.com/611/Sample%20Kit.svg"
-            alt="sampleImage"
-            width={70}
-            height={70}
-          />
-          <div className="pl-5 w-9/12">
-            <h1 className="font-semibold text-2xl">Sample Kit</h1>
-            <p>
-              See each product up close before creating your project. Includes
-              popular products printed on different materials.
-            </p>
-            <Link href="/samplekit" className="block mt-2 text-primary">
-              Learn More {rightArrow}
-            </Link>
-          </div>
-        </div>
       </div>
     </div>
   )
