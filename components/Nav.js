@@ -228,13 +228,13 @@ const Nav = () => {
                   </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className={navStyles['menu-dropdown-links']}
                     href="/stickers"
                     onClick={toggleMenuDropdown}
                   >
                     Stickers
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a

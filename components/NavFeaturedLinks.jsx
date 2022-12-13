@@ -51,7 +51,7 @@ const NavFeaturedLinks = () => {
                     </ul>
                     </div>
                     <div className={navStyles["sellers-sub-container"]}>
-                    <h4 className={navStyles['submenu-link']}><Link href="#products">Promotional Products</Link></h4>
+                    <h4 className={navStyles['submenu-link']}><Link href="#">Promotional Products</Link></h4>
                     <ul>
                         <li className={navStyles['submenu-link-item']}><a href="#">Notepads</a></li>
                         <li className={navStyles['submenu-link-item']}><a href="#">Pens</a></li>
@@ -127,7 +127,7 @@ const NavFeaturedLinks = () => {
                     </ul>
                     </div>
                     <div className={navStyles["sellers-sub-container"]}>
-                    <h4 className={navStyles['submenu-link']}><Link href="#others">Others</Link></h4>
+                    <h4 className={navStyles['submenu-link']}><Link href="#">Others</Link></h4>
                     <ul>
                         <li className={navStyles['submenu-link-item']}><a href="#">Brochures</a></li>
                         <li className={navStyles['submenu-link-item']}><a href="#">Carbonless Forms</a></li>
