@@ -61,7 +61,7 @@ const NavFeaturedLinks = () => {
                     </ul>
                     </div>
                     <div className={navStyles["sellers-sub-container"]}>
-                    <h4 className={navStyles['submenu-link']}><Link href="#stickers">Stickers</Link></h4>
+                    <h4 className={navStyles['submenu-link']}><Link href="/stickers">Stickers</Link></h4>
                     <ul>
                         <li className={navStyles['submenu-link-item']}><a href="#">Custom Stickers</a></li>
                         <li className={navStyles['submenu-link-item']}><a href="#">Die Cut Stickers</a></li>
@@ -81,7 +81,7 @@ const NavFeaturedLinks = () => {
                     </ul>
                     </div>
                     <div className={navStyles["sellers-sub-container"]}>
-                    <h4 className={navStyles['submenu-link']}><Link href="#envelopes">Envelopes</Link></h4>
+                    <h4 className={navStyles['submenu-link']}><Link href="/envelopes">Envelopes</Link></h4>
                     <ul>
                         <li className={navStyles['submenu-link-item']}><a href="#">1-Color Envelopes</a></li>
                         <li className={navStyles['submenu-link-item']}><a href="#">Full Color Envelopes</a></li>
@@ -98,7 +98,7 @@ const NavFeaturedLinks = () => {
                     </ul>
                     </div>
                     <div className={navStyles["sellers-sub-container"]}>
-                    <h4 className={navStyles['submenu-link']}><Link href="#handtags">Hang Tags</Link></h4>
+                    <h4 className={navStyles['submenu-link']}><Link href="/hangtag">Hang Tags</Link></h4>
                     <ul>
                         <li className={navStyles['submenu-link-item']}><a href="#">Standard Hang Tags</a></li>
                         <li className={navStyles['submenu-link-item']}><a href="#">Die Cut Hang Tags</a></li>
@@ -108,7 +108,7 @@ const NavFeaturedLinks = () => {
                     </ul>
                     </div>
                     <div className={navStyles["sellers-sub-container"]}>
-                    <h4 className={navStyles['submenu-link']}><Link href="#posters">Posters</Link></h4>
+                    <h4 className={navStyles['submenu-link']}><Link href="/posters">Posters</Link></h4>
                     <ul>
                         <li className={navStyles['submenu-link-item']}><a href="#">Large Format Posters</a></li>
                         <li className={navStyles['submenu-link-item']}><a href="#">Bulk Posters</a></li>
