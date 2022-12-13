@@ -133,7 +133,7 @@ const NavFeaturedLinks = () => {
                         <li className={navStyles['submenu-link-item']}><a href="#">Carbonless Forms</a></li>
                     </ul>
                     </div>
-                    <a className={navStyles['submenu-see-all']} href="/productlist">See All Products</a>
+                    <Link className={navStyles['submenu-see-all']} href="/productlist">See All Products</Link>
                 </div>
                 <div className={toggleState === 2 ? `${navStyles["industry-sub-menu"]} ${navStyles["industry-sub-menu-active"]}` : `${navStyles["industry-sub-menu"]}`}>
                     <div className={navStyles["industry-submenu-container"]}>
