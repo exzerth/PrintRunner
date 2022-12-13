@@ -14,7 +14,7 @@ function ShippingFooter(props) {
     const secondDesc =props.secondDesc
     const secondLink =props.secondLink
   return (
-    <div className="mt-5 space-y-5 lg:space-y-0 mx-5 lg:mx-auto lg:flex justify-center">
+    <div className="my-10 space-y-5 lg:space-y-0 mx-5 container mx-auto w-11/12 lg:mx-auto lg:flex justify-center">
     <div className="flex lg:w-1/2 ">
       <Image
         src={firstIcon}
