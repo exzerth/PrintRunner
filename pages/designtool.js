@@ -17,7 +17,7 @@ function designtool({
   firstIcon = 'https://s1-ecp.printrunner.com/608/FREE%20Shipping.svg'
   firstHeader = 'FREE Shipping!'
   firstDesc = 'Shop effortlessly with free shipping on orders of $69 and up. '
-  firstLink = '/designtool'
+  firstLink = '/shipping'
   secondIcon = 'https://s1-ecp.printrunner.com/611/Sample%20Kit.svg'
   secondHeader = 'Sample Kit'
   secondDesc =
