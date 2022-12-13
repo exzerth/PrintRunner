@@ -349,7 +349,12 @@ const Nav = () => {
                 className={navStyles['shipping-icon']}
                 icon={faShippingFast}
               />
-              <span>Enjoy FREE Shipping over $69</span>
+              <span>
+                Enjoy FREE Shipping over $69 &nbsp;
+                <Link href="/shipping" className="underline pl-2">
+                  See Details
+                </Link>
+              </span>
             </div>
           </div>
         </div>
