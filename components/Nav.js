@@ -230,7 +230,7 @@ const Nav = () => {
                 <li>
                   <a
                     className={navStyles['menu-dropdown-links']}
-                    href="#stickers"
+                    href="/stickers"
                     onClick={toggleMenuDropdown}
                   >
                     Stickers
