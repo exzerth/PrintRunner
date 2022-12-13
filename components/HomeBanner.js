@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import mobileBanner from '../images/mobile-home-banner.jpeg'
 import desktopBanner from '../images/desktop-banner.jpeg'
-import '../styles/HomeBanner.module.css'
 
 const HomeBanner = () => {
   return (

@@ -2,12 +2,12 @@ import BannerDescription from '../components/BannerDescription'
 import BannerHead from '../components/BannerHead'
 import BannerProducts from '../components/BannerProducts'
 import BannerLinks from '../components/BannerLinks'
-import labelHero from '../images/labelcategorybanner.jpeg'
+import stickerHero from '../images/stickercategorybanner.jpeg'
 import Meta from '../components/Meta'
 import labelsCategory from '../utils/labels.json'
 import CategoryHeader from '../components/CategoryHeader'
 
-export default function label({
+export default function stickers({
   bgImage,
   categoryTitle,
   categoryDescriptionOne,
@@ -17,9 +17,9 @@ export default function label({
   productTypeImage,
   productTypeDetails,
 }) {
-  bgImage = labelHero
-  categoryTitle = 'Label Printing'
-  categoryDescriptionOne = 'A great selection of labels for every need'
+  bgImage = stickerHero
+  categoryTitle = 'Stickers Printing'
+  categoryDescriptionOne = 'A great selection of stickers for every need'
   categoryDescriptionTwo = 'Best for convention and trade shows'
   categoryDescriptionThree = 'Wide array of indoors and outdoors options'
   productTypeName
@@ -41,7 +41,7 @@ export default function label({
           <div className="w-full flex justify-center px-[15px] md:px-[24px] flex-wrap">
             <CategoryHeader
               categoryHeaderTitle="Most Popular"
-              categoryHeaderSubtitle="The go-to choices for our label customers"
+              categoryHeaderSubtitle="The go-to choices for our sticker customers"
             />
             <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-4">
               {labelsCategory.label.popular.map((label) => (
@@ -59,7 +59,7 @@ export default function label({
             </div>
             <CategoryHeader
               categoryHeaderTitle="Shop by Type"
-              categoryHeaderSubtitle="Find the best personalized label for your project or business"
+              categoryHeaderSubtitle="Find the best personalized stickers for your project or business"
             />
             <div className="w-full grid grid-cols-2 lg:grid-cols-3 gap-4">
               {labelsCategory.label.type.map((label) => (

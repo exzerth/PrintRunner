@@ -4,6 +4,7 @@ import HomeBanner from '../components/HomeBanner'
 import Meta from '../components/Meta'
 import Mission from '../components/Mission'
 import Promised from '../components/Promised'
+import Reviews from '../components/Reviews'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Promised />
       <Mission />
       <Clients />
+      <Reviews />
     </>
   )
 }

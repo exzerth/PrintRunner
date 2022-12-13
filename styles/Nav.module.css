@@ -69,6 +69,9 @@
     text-align: center;
     border-bottom: 1px solid #dcdcdc;
     border-top: 1px solid #dcdcdc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .shipping-icon {
@@ -788,6 +791,94 @@
         position: relative;
         padding-right: 4px;
     }
+
+    .markets-sub-menu {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-column-gap: 45px;
+        grid-row-gap: 20px;
+    }
+
+    .signs-dropdown {
+        display: none;
+        color: #333;
+        max-height: 900px;
+        background: white;
+        position: absolute;
+        left: 0;
+        min-width: 264px;
+        min-height: 200px;
+        width: 100%;
+        padding: 20px;
+        z-index: 2;
+        box-shadow: 0 3px 3px rgb(0 0 0 / 25%);
+    }
+
+    .signs-dropdown-show {
+        display: block;
+        z-index: 2;
+    }
+
+    .signs-sub-menu {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-column-gap: 45px;
+        grid-row-gap: 20px;
+    }
+
+    .promo-dropdown {
+        display: none;
+        color: #333;
+        max-height: 900px;
+        background: white;
+        position: absolute;
+        left: initial;
+        right: 10px;
+        min-width: 264px;
+        min-height: 200px;
+        padding: 20px;
+        z-index: 2;
+        box-shadow: 0 3px 3px rgb(0 0 0 / 25%);
+    }
+
+    .promo-dropdown-show {
+        display: block;
+        z-index: 2;
+    }
+
+    .promo-sub-menu {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 56px;
+        grid-row-gap: 20px;
+    }
+
+    .package-dropdown {
+        display: none;
+        color: #333;
+        max-height: 900px;
+        background: white;
+        position: absolute;
+        left: initial;
+        right: 1px;
+        min-width: 264px;
+        min-height: 200px;
+        padding: 20px;
+        z-index: 2;
+        box-shadow: 0 3px 3px rgb(0 0 0 / 25%);
+    }
+
+    .package-dropdown-show {
+        display: block;
+        z-index: 2;
+    }
+
+    .package-sub-menu {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 56px;
+        grid-row-gap: 20px;
+    }
  
 }
 
@@ -1106,6 +1197,39 @@
     .nav-desktop-list-link > a {
         padding: 21px 20px;
         font-size: 14px;
+    }
+
+    .stickers-dropdown {
+        left: unset;
+        width: auto;
+    }
+
+    .stickers-sub-menu {
+        grid-gap: 75px;
+    }
+
+    .stickers-sub-menu:last-child {
+        padding-right: 25px;
+    }
+
+    .markets-sub-menu {
+        grid-column-gap: 70px;
+    }
+
+    .markets-sub-menu:last-child {
+        padding-right: 35px;
+    }
+
+    .signs-dropdown {
+        left: unset;
+        width: 50%;
+    }
+
+    .signs-sub-menu {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-column-gap: 45px;
+        grid-row-gap: 20px;
     }
  
 }

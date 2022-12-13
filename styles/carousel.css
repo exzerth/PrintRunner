@@ -1,0 +1,36 @@
+.rec-arrow {
+    display:none
+}
+
+.mobilerousel {
+    display: none;
+    margin: 20px;
+}
+
+.tabrousel {
+    display: none;
+    margin: 20px;
+}
+
+@media (max-width: 769px) {
+
+    .mobilerousel {
+        display: none;
+    }
+
+    .tabrousel {
+        display: grid;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .tabrousel {
+        display: none;
+    }
+
+    .mobilerousel {
+        display: grid;
+    }
+
+}
