@@ -351,7 +351,10 @@ const Nav = () => {
               />
               <span>
                 Enjoy FREE Shipping over $69 &nbsp;
-                <Link href="/shipping" className="underline pl-2">
+                <Link
+                  href="/shipping"
+                  className="hidden md:inline-block underline pl-2"
+                >
                   See Details
                 </Link>
               </span>
