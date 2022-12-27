@@ -22,7 +22,7 @@ function ShopNow() {
   const finishingContainer = useRef(null)
   const readyToShipContainer = useRef(null)
   const [price, SetPrice] = useState(null)
-  const[btnValue , SetBtnValue] = useState("CONTINUE")
+  const [btnValue, SetBtnValue] = useState("CONTINUE")
   const star = <FontAwesomeIcon icon={faStar} />
   const check = <FontAwesomeIcon className="text-primary" icon={faCheck} />
   function MainCalc() {
@@ -333,7 +333,7 @@ function ShopNow() {
                 </div>
               </div>
             </li>
-            <div className="hidden lg:block border-t-2"> 
+            <div className="hidden lg:block border-t-2">
               <div className="text-2xl text-gray20 pl-4 p-5 flex">
                 <h1 className="w-2/5">Printing Cost</h1>
                 <b className="text-right w-9/12">&#36;{price}</b>
@@ -345,10 +345,10 @@ function ShopNow() {
               </div>
             </div>
             <div className="text-gray20 pl-4 p-5 flex">
-                <h1 className="font-bold w-2/5 p-2">Estimate Shipping</h1>
-                <input type="number" min="1" className="text-right w-3/5 border"/>
-                <input type="button" className="text-primary bg-bgcolor font-bold p-2" value="GET RATES"></input>
-              </div>
+              <h1 className="font-bold w-2/5 p-2">Estimate Shipping</h1>
+              <input type="number" min="1" className="text-right w-3/5 border" />
+              <input type="button" className="text-primary bg-bgcolor font-bold p-2" value="GET RATES"></input>
+            </div>
           </ul>
         </div>
         <div className="flex space-x-6 justify-center p-5">
@@ -375,7 +375,7 @@ function ShopNow() {
           </div>
         </div>
       </div>
-      <div style={{zIndex: 10}} className="lg:hidden fixed w-full p-8 flex justify-center bottom-0 bg-white">
+      <div style={{ zIndex: 10 }} className="lg:hidden fixed w-full p-8 flex justify-center bottom-0 bg-white">
         <div className="w-1/2 text-2xl">
           <h1 className="font-bold ml-10">&#36;{price}</h1>
           <p className="text-gray20 text-lg">Only &#36;{price} each</p>
